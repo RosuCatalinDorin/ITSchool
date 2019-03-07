@@ -13,8 +13,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 include_once '../config/Database.php';
 include_once '../models/Controler.php';
-//todo: de vazut formularul de inscriere a celor de la scola informala. Date despre cursnat
-// Instantiate DB & connect
+
 $database = new Database();
 $db = $database->connect();
 

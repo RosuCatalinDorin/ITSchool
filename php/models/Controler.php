@@ -72,10 +72,8 @@
     public function create() {
           // Create query
           $query = 'INSERT INTO ' . $this->table . ' SET title = :title, body = :body, author = :author, category_id = :category_id';
-
           // Prepare statement
           $stmt = $this->conn->prepare($query);
-
           // Clean data
           $this->title = htmlspecialchars(strip_tags($this->title));
           $this->body = htmlspecialchars(strip_tags($this->body));
