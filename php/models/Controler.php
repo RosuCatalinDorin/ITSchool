@@ -24,7 +24,10 @@
     public function read() {
 
       // Create query
-      $query = 'SELECT * FROM curs';
+      $query = 'SELECT curs.curs_id as curs_id, CURS.titlu_curs as titlu_curs,   CURS.tehnologii as tehnologii  ,CURS.msg_atentionare_date_start as msg_atentionare_date_start, CURS.msg_pers_targetate as msg_pers_targetate,
+                  CURS.pret as pret,CURS.pret_reducere as pret_reducere, curs.numar_ore_saptamana as numar_ore_saptamana, curs.numar_total_ore as numar_total_ore, grupa_studenti.data_start as data_start, grupa_studenti.data_end as data_end
+                FROM CURS
+                JOIN grupa_studenti  on grupa_studenti.curs_id = grupa_studenti.curs_id';
       
       // Prepare statement
       $stmt = $this->conn->prepare($query);
