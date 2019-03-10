@@ -152,7 +152,7 @@ p.lead {
 
 .section {
     padding: 171px 0;
-    padding-top: 0;
+    padding: 0;
 }
 
 .section-title {
@@ -688,7 +688,7 @@ header {
 .container-logo-end-desc{
     display: flex
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
     /* We tell both sidebars to share a row */
     .container-logo-end-desc{
         display: block;
@@ -700,7 +700,36 @@ header {
     .divDescClass{
         width: 100%;
     }
+
+    .team-box {border: 1px solid #e5e5e5; padding:10px;  width: 270px;  margin-left: 15px;}
+    .trainerProfile{
+        margin:20px;
+    }
 }
 h1,h2,h3,h4,h5,p,small{
     color: black;
+}
+.padding80 {Padding:80px;}
+.sec-title h2 {font-size:36px;font-weight:600;}
+.sec-title h3 {font-size:18px; margin-bottom:30px;}
+.sec-title h3:after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background: #ea6c56 ;
+    left: 40%;
+    bottom: 60px;
+}
+.team-box {border: 1px solid #e5e5e5; padding:10px;  width: 270px;}
+.team-box:hover {border: 1px solid #ea0d0d;}
+.team-img img {border: 1px solid #ea0d0d;}
+.team-title h3 {font-size:24px;font-weight:700;color:#ea6c56 ;}
+.team-title h4 {font-size:16px; font-weight:600;}
+.team-title p {line-height:22px;}
+.trainerProfile{
+    margin-left: 13%;
+}
+.descTrainers{
+    margin: 20px;
 }
