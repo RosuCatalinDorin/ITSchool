@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-/*
-
-Style   : MobApp CSS
-Version : 1.0
-Author  : Surjith S M
-URI     : https://surjithctly.in/
-
-Copyright © All rights Reserved 
-
-*/
-
-
 /*------------------------
 [TABLE OF CONTENTS]
     
@@ -55,13 +43,11 @@ h1 {
 h2 {
     font-size: 45px;
     font-weight: 300;
-    color: #633991;
     letter-spacing: -1px;
     margin-bottom: 1rem;
 }
 
 h3 {
-    color: #633991;
     font-size: 33px;
     font-weight: 500;
 }
@@ -69,14 +55,12 @@ h3 {
 h4 {
     font-size: 20px;
     font-weight: 500;
-    color: #633991;
 }
 
 h5 {
     font-size: 28px;
     font-weight: 300;
-    color: #633991;
-    margin-bottom: 0.7rem;
+margin-bottom: 0.7rem;
 }
 
 p {
@@ -700,14 +684,10 @@ header {
     .divDescClass{
         width: 100%;
     }
-
     .team-box {border: 1px solid #e5e5e5; padding:10px;  width: 270px;  margin-left: 15px;}
     .trainerProfile{
         margin:20px;
     }
-}
-h1,h2,h3,h4,h5,p,small{
-    color: black;
 }
 .padding80 {Padding:80px;}
 .sec-title h2 {font-size:36px;font-weight:600;}
