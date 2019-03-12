@@ -222,7 +222,7 @@
     padding-bottom: 10px;
 }
 
-.trainer-short-description span{
+.trainer-short-description span {
     padding-right: 10%;
 }
 
@@ -314,20 +314,22 @@ form label{
     text-align: left;
     color: white;
 }
-
 .social-media-paragraph span{
     color: #959094;
 }
-
 .submit-button {
     width: 40%;
     background-color: darkgrey;
     float: right;
 }
-
 .submit-button:hover {
     cursor: pointer;
     background-color: #e5003c!important;
+}
+@media only screen and (max-width: 600px){
+.info-curs-detalii {
+        display: block;
+    }
 }
 
 /* FOOTER END */
