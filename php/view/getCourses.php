@@ -12,13 +12,10 @@
 
   include_once '../config/Database.php';
   include_once '../models/Controler.php';
+  error_reporting(E_ALL);
 
   $database = new Database();
   $db = $database->connect();
-
-
-
-
   $post = new Controler($db);
   $result = $post->read();
   $num = $result->rowCount();
@@ -29,7 +26,6 @@
       // $posts_arr['data'] = array();
       while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
-
           $post_item = array(
               'curs_id' => $curs_id,
               'titlu_curs,' => $titlu_curs,
@@ -43,7 +39,6 @@
               'numar_total_ore' => $numar_total_ore,
               'numar_ore_saptamana' => $numar_ore_saptamana
           );
-
           // Push to "data"
           array_push($posts_arr, $post_item);
           // array_push($posts_arr['data'], $post_item);

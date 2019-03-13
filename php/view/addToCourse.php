@@ -25,8 +25,8 @@ $data = json_decode(file_get_contents("php://input"));
 
 if($data == null){
     $controler->curs_id = $_POST['curs_id'];
-    $controler->first_name = $_POST['first_name'];
-    $controler->last_name = $_POST['last_name'];
+    $controler->first_name = $_POST['nume'];
+    $controler->last_name = $_POST['prenume'];
     $controler->data_nasterii = $_POST['data_nasterii'];
     $controler->cunostinte_it = $_POST['cunostinte_it'];
     $controler->email = $_POST['email'];
@@ -38,8 +38,8 @@ if($data == null){
 }
 else {
     $controler->curs_id = $data->curs_id;
-    $controler->first_name = $data->first_name;
-    $controler->last_name = $data->last_name;
+    $controler->first_name = $data->nume;
+    $controler->last_name = $data->prenume;
     $controler->data_nasterii = $data->data_nasterii;
     $controler->cunostinte_it = $data->cunostinte_it;
     $controler->email = $data->email;
