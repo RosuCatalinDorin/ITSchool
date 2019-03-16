@@ -12,7 +12,6 @@
     <!-- Font -->
 
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
      <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Themify Icons -->
@@ -20,6 +19,10 @@
     <!-- Owl carousel -->
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/teamStyle.css">
+    <link rel="stylesheet" href="../detaliiCurs/css/detalii-curs.css">
+    <link rel="stylesheet" href="./home.css">
+
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -39,13 +42,13 @@
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
 
-    <!-- Nav Menu -->
+    <!-- NAV BAR START-->
     <div class="nav-menu fixed-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="../images/partea_de_susLogo.png" height="43" width="43" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <a class="navbar-brand" href="index.html"><img src="../images/head.png" height="43" width="43" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span></a> </li>
@@ -59,152 +62,119 @@
               </div>
          </div>
     </div>
-
-    <header  id="home">
-        <div class="container mt-5">
-            <h1 class="textClass"> Mesaj 1 (eu zic moto)</h1>
+<!-- NAV BAR END -->
+    <!-- START HEADER -->
+    <header  id="home" class="home-header">
+        <div class="">
+            <img src="../images/logo_partea_deJos.png" alt="phone" class="img-fluid">
         </div>
-        <div class="img-holder mt-3"><img src="../images/logo_partea_deJos.png" alt="phone" class="img-fluid">
-            <p class="textClass">Mesaj 2 De ce am creat asta? O intrebare de genu</p>
+        <div class="container take-action-message">
+            <h1 class="textClass text-center home-main-header">Putem invata impreuna unii de la ceilalti.</h1>
+            <p class="">Vino la cursurile noastre sa invatam impreuna.</p>
         </div>
-
+        <div class="detalii-curs-button-container">
+            <button type="button" class="btn enroll-header-btn">
+                <a class="btn-lg" href="#enroll-form">INSCRIE-TE</a>
+            </button>
+        </div>
     </header>
 
-    <div class="section" id="cursuri">
-        <div class="container">
-            <div class="section-title">
-                <small>Speak Programming</small>
-                <h3>Cursuri</h3>
-            </div>
+    <!-- END HEADER -->
 
+    <!-- SECTIUNE DESPRE NOI START -->
+
+    <!-- DESPRE NOI END -->
+
+<!-- SECTIUNE CURSURI START -->
+    <div class="section section-home-curs" id="cursuri">
+        <div class="container">
+            <h1 class="text-center home-main-header">Vino si investeste in tine</h1>
             <div class="card-deck">
                 <div class="card pricing">
                     <div class="card-head">
-                        <small class="text-primary">PERSONAL</small>
-                        <span class="price">$14<sub>/m</sub></span>
+                        <small class="text-primary">FRONTEND INITIERE</small>
+                        <span class="price">379 RON<sub>/4m</sub></span>
+                    </div>
+                    <div class="course-image-container">
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">10 Projects</div>
-                        <div class="list-group-item">5 GB Storage</div>
-                        <div class="list-group-item">Basic Support</div>
-                        <div class="list-group-item"><del>Collaboration</del></div>
-                        <div class="list-group-item"><del>Reports and analytics</del></div>
+                        <div class="list-group-item">Foloseste Html5, Css3, Java-script, JQuery, GIT si invata cum sa construiesti un website de la zero.</div>
                     </ul>
                     <div class="card-body">
-                        <a href="../detaliiCurs/views/detalii-curs.html" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                        <a href="screens/curs.html" class="btn btn-primary btn-lg btn-block">Vezi detalii</a>
                     </div>
                 </div>
                 <div class="card pricing">
                     <div class="card-head">
-                        <small class="text-primary">FOR TEAMS</small>
-                        <span class="price">$29<sub>/m</sub></span>
+                        <small class="text-primary">INCEPATORI</small>
+                        <span class="price">1500 RON<sub>/4m</sub></span>
                     </div>
+                    <div class="course-image-container">
+                        </div>
                     <ul class="list-group list-group-flush">
                         <div class="list-group-item">Unlimited Projects</div>
                         <div class="list-group-item">100 GB Storage</div>
-                        <div class="list-group-item">Priority Support</div>
-                        <div class="list-group-item">Collaboration</div>
-                        <div class="list-group-item">Reports and analytics</div>
                     </ul>
                     <div class="card-body">
-                        <a href="../detaliiCurs/views/detalii-curs.html" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                        <a href="screens/curs.html" class="btn btn-primary btn-lg btn-block">Vezi detalii</a>
                     </div>
                 </div>
                 <div class="card pricing">
                     <div class="card-head">
-                        <small class="text-primary">ENTERPRISE</small>
-                        <span class="price">$249<sub>/m</sub></span>
+                        <small class="text-primary">BACKEND INITIERE</small>
+                        <span class="price">1500 RON<sub>/4m</sub></span>
                     </div>
+                    <div class="course-image-container">
+                        </div>
                     <ul class="list-group list-group-flush">
                         <div class="list-group-item">Unlimited Projects</div>
                         <div class="list-group-item">Unlimited Storage</div>
-                        <div class="list-group-item">Collaboration</div>
-                        <div class="list-group-item">Reports and analytics</div>
-                        <div class="list-group-item">Web hooks</div>
                     </ul>
                     <div class="card-body">
-                        <a href="../detaliiCurs/views/detalii-curs.html" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+                        <a href="screens/curs.html" class="btn btn-primary btn-lg btn-block">Vezi detalii</a>
                     </div>
                 </div>
             </div>
-            <!-- // end .pricing -->
         </div>
-
     </div>
+<!-- SECTIUNE CURSURI END -->
 
 
-        <div class="container   embed-responsive">
-            <div class="section-title">
-                <small>Speak Programming</small>
-                <h3>Trainers</h3>
-            </div>
-            <div class="contentTem">
-                <div class="divNewTeam testimonials-single">
-                    <img src="../images/client.png" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
-                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                    <a href="#" class="btn btn-light"> <i class="fa fa-linkedin-square" style="font-size:36px; color:black"></i>  </a>
-                </div>
-                <div class="divNewTeam testimonials-single">
-                    <img src="../images/client.png" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
-                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                    <a href="#" class="btn btn-light"> <i class="fa fa-linkedin-square" style="font-size:36px; color:black"></i>  </a>
-                </div>
-                <div class="divNewTeam testimonials-single">
-                    <img src="../images/client.png" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
-                    <blockquote class="blockquote">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
-                    <h5 class="mt-4 mb-2">Crystal Gordon</h5>
-                    <a href="#" class="btn btn-light"> <i class="fa fa-linkedin-square" style="font-size:36px; color:black"></i>  </a>
-                </div>
-            </div>
-        </div>
+<!-- SECTIUNE TRAINER START-->
 
-
-        <!--       <div class="container  embed-responsive" >
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <div class="sec-title descTrainers" >
-                        <h2>Oameni faini</h2>
-                        <h3> The small element is used to create a lighter, secondary text in any heading:</h3>
-                    </div>
-                    <div class="divider-line text-center descTrainers"></div>
-                </div>
-            </div>
-            <div class="row text-center embed-responsive-1by1 divTeam">
-                <div class="col-md-4 trainerProfile" >
-                    <div class="team-box ">
-                        <div class="team-img">
-                            <img src="images/pozaIonutPausan.jpg" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
+<div class="section section-home-trainer">
+        <div class="container">
+                <h1 class="text-center home-main-header">Cu cine vei colabora</h1>
+                <div class="card-deck">
+                    <div class="card pricing">
+                        <div class="card-head">
+                            <img src="../images/pozaIonutPausan.jpg" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
                         </div>
-                        <div class="team-title ">
-                            <h3>Ionut Pausan</h3>
-                            <h4>Web developer</h4>
-                            <a href="#" class="btn btn-light"> <i class="fa fa-linkedin-square" style="font-size:36px; color:black"></i>  </a>
-                             </div>
+                        <blockquote class="blockquote text-center">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
+                        <ul class="list-group list-group-flush">
+                            <h5 class="mt-4 mb-2 text-center">Pausan Ionut</h5>
+                            <a target="_blank" href="https://www.linkedin.com/in/ionut-adrian-pausan-3a7300137/" class="btn"> <i class="fa fa-linkedin-square" style="font-size:40px; color:#0077B5"></i>  </a>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-md-4 trainerProfile">
-                    <div class="team-box">
-                        <div class="team-img">
+                    <div class="card pricing">
+                            <div class="card-head">
+                                <img src="../images/pozaIonutPausan.jpg" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
+                            </div>
+                            <blockquote class="blockquote text-center ">Uniquely streamline highly efficient scenarios and 24/7 initiatives. Conveniently embrace multifunctional ideas through proactive customer service. Distinctively conceptualize 2.0 intellectual capital via user-centric partnerships.</blockquote>
+                            <ul class="list-group list-group-flush">
+                                <h5 class="mt-4 mb-2 text-center">Rosu Catalin</h5>
+                                <a target="_blank" href="https://www.linkedin.com/in/ro%C8%99u-c%C4%83t%C4%83lin-dorin-872322112/" class="btn"> <i class="fa fa-linkedin-square" style="font-size:40px; color:#0077B5"></i>  </a>
+                            </ul>
                         </div>
-                        <div class="team-title">
-                            <img src="images/pozaCatalinRosu.PNG" class="rounded-circle" alt="Cinque Terre" width="136" height="136">
-                            <h3>Catalin Rosu</h3>
-                            <h4>Web developer</h4>
-                            <a href="#" class="btn btn-light"> <i class="fa fa-linkedin-square" style="font-size:36px; color:black"></i>  </a>
-                        </div>
-                    </div>
                 </div>
-
             </div>
-        </div>-->
+</div>
 
+<!-- SECTIUNE TRAINER END -->
 
     <div class="section bg-gradient" id ="aboutUS">
         <div class="container">
             <div class="call-to-action">
-
                 <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
                 <h2>Download Anywhere</h2>
                 <p class="tagline">Available for all major mobile and desktop platforms. Rapidiously visualize optimal ROI rather than enterprise-wide methods of empowerment. </p>
@@ -215,83 +185,39 @@
                 <p class="text-primary"><small><i>*Works on iOS 10.0.5+, Android Kitkat and above. </i></small></p>
             </div>
         </div>
-
     </div>
-    <!-- // end .section -->
-
-    <div class="light-bg py-5" id="contact">
-        <div class="container">
-            <div class="card bg-light">
-                <article class="card-body mx-auto" style="max-width: 400px;">
-                    <h4 class="card-title mt-3 text-center">Inscriete la curs </h4>
-                    <p class="text-center">Completeaza campurile de mai jos </p>
-                    <p class="divider-text">
-                        <span class="bg-light">OR</span>
-                    </p>
-                    <form>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"> </span>
-                            </div>
-                            <input name="" class="form-control" placeholder="Nume complet" type="text">
-                        </div> <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"></span>
-                            </div>
-                            <input name="" class="form-control" placeholder="Adresa de e-mail" type="email">
-                        </div> <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">  </span>
-                            </div>
-                            <select class="custom-select" style="max-width: 120px;">
-                                <option selected="">+40</option>
-                                <option value="1">+972</option>
-                                <option value="2">+198</option>
-                                <option value="3">+701</option>
-                            </select>
-                            <input name="" class="form-control" placeholder="Numar de telefon" type="text">
-                        </div> <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"></span>
-                            </div>
-                            <select class="form-control">
-                                <option selected=""> Selecteaza cursul</option>
-                                <option>HTML5, CSS, JAVA-SCRIPT</option>
-                                <option>MySQL,PHP</option>
-                            </select>
-
-                        </div> <!-- form-group end.// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">  </span>
-                            </div>
-                            <textarea  class="form-control"  rows="4" cols="50"></textarea>
-                        </div> <!-- form-group// -->
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> TestFAcebook  </button>
-                        </div> <!-- form-group// -->
-                    </form>
-                </article>
-            </div> <!-- card.// -->
-
-        </div>
-
-    </div>
-    <!-- // end .section -->
-    <footer class="my-5 text-center">
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>
-        <small>
-            <a href="#" class="m-2">PRESS</a>
-            <a href="#" class="m-2">TERMS</a>
-            <a href="#" class="m-2">PRIVACY</a>
-        </small>
-    </footer>
 
 
+    <!-- START FOOTER -->
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="social-media">
+                        <h1>Contacteaza-ne pe:</h1>
+                        <p class="social-media-paragraph">Speak programming: 
+                            <span>contact@speakprogramming.ro</span>
+                        </p>
+                        <p class="social-media-paragraph">Facebook: 
+                            <span>contact@speakprogramming.ro</span>
+                        </p>
+                        <div class="social-media-icons">
+                        </div>
+                        <p>Adresa</p>
+                    </div>
+        
+                    <div class="contact-form">
+                        <h1>Email us:</h1>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" value="" class="form-control input-lg input-space" placeholder="Your Email"/>
+        
+                        <label for="mesaj">Scrie-ne un mesaj</label>
+                        <textarea type="text" name="mesaj" value="" class="input-space form-control input-lg" placeholder="Mesaj..."/></textarea>
+                        <button class="btn submit-button-footer">Submit</button>
+                    </div>
+                </div>
+                <p class="copyright-message text-center"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED BY <a href="">SPEAK PROGRAMMING</a></small></p>
+            </div>
+        </footer>
 </body>
 
 </html>

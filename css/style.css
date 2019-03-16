@@ -20,17 +20,8 @@
 ----------------------*/
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Proxima Nova";
     position: relative;
-}
-
-a {
-    color: #e38cb7;
-}
-
-a:hover,
-a:focus {
-    color: #d6619c;
 }
 
 h1 {
@@ -41,7 +32,6 @@ h1 {
 }
 
 h2 {
-    font-size: 45px;
     font-weight: 300;
     letter-spacing: -1px;
     margin-bottom: 1rem;
@@ -61,10 +51,6 @@ h5 {
     font-size: 28px;
     font-weight: 300;
 margin-bottom: 0.7rem;
-}
-
-p {
-    color: #959094;
 }
 
 p.lead {
@@ -94,7 +80,7 @@ p.lead {
 
 .btn-primary {
     border-radius: 3px;
-    background-color: red;
+    background-color: black;
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
     font-weight: 500;
     padding: 0.6rem 2rem;
@@ -107,9 +93,10 @@ p.lead {
 .btn-primary:not([disabled]):not(.disabled).active,
 .btn-primary:not([disabled]):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
-    background-color: black;
+    background-color: #e5003c;
     box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
     color: #FFF;
+    cursor: pointer;
 }
 
 .btn-light {
@@ -135,13 +122,13 @@ p.lead {
 }
 
 .section {
-    padding: 171px 0;
-    padding: 0;
+    padding: 50px 0 70px 0;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
+    border-bottom: 1px solid grey;
 }
 
 .section-title small {
@@ -164,14 +151,14 @@ p.lead {
 .nav-menu {
     padding: 1rem 0;
     transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .nav-menu.is-scrolling,
 .nav-menu.menu-is-open {
     background-color: rgba(0, 0, 0, 0.85);
-    background: -moz-linear-gradient( 135deg, rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient( 135deg, rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
-    background: linear-gradient( 135deg, rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
+    /* background: rgb(0,212,255); */
+background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,9,0.7987570028011204) 0%, rgba(2,0,36,1) 100%, rgba(27,0,36,0.8743872549019608) 100%);
     -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
@@ -185,7 +172,7 @@ p.lead {
     position: relative;
 }
 .nav-menu {
-    background-image: linear-gradient( 135deg, rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -220,15 +207,14 @@ p.lead {
 header {
     padding: 100px 0 0;
     text-align: center;
-    color: #FFF;
 }
 
-.bg-gradient {
+/* .bg-gradient {
     background-image: -moz-linear-gradient( 135deg, rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
     background-image: -webkit-linear-gradient( 135deg,rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
     background-image: -ms-linear-gradient( 135deg, rgba(0, 0, 0, 0.85)0%, rgba(250, 0, 0, 0.8) 100%);
     background-image: linear-gradient( 135deg, rgba(0, 0, 0, 0.85) 0%, rgba(250, 0, 0, 0.8) 100%);
-}
+} */
 
 .tagline {
     font-size: 23px;
@@ -236,12 +222,6 @@ header {
     color: #ffb8f6;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.img-holder {
-    height: 0;
-    padding-bottom: 33%;
-    overflow: hidden;
 }
 
 @media (max-width:1200px) {
@@ -533,7 +513,7 @@ header {
     display: block;
     font-size: 45px;
     font-weight: 300;
-    color: #633991;
+    color: black;
 }
 
 .card.pricing .card-head .price sub {
@@ -553,7 +533,8 @@ header {
 }
 
 .card.pricing .card-body {
-    padding: 1.75rem;
+    padding:  1.75rem  1.75rem  0 1.75rem;
+    
 }
 
 
@@ -659,10 +640,7 @@ header {
     display:flex;
 
 }
-.textClass{
-    color: black;
 
-}
 .logoClas{
     width: 50%;
 }
