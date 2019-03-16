@@ -1,0 +1,405 @@
+/* Header start */
+.header-detalii-curs {
+    background-image: url("../../images/headerbk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom:25px;
+    margin-top: 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalii-curs-titlu{
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.detalii-curs-motto{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.enroll-header-btn{
+    font-size: 15px;
+}
+
+.enroll-header-btn:hover {
+    background: #e5003c;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 16px;
+}
+
+.container-detalii-curs {
+    text-align: center;
+}
+
+.detalii-curs-button-container{
+    margin-bottom: 30px;
+}
+/* Header ends */
+
+/* Info curs container start */
+.curs-container {
+    width: 100%;
+    background: #f9f9f9;
+    padding-bottom:40px;
+}
+.info-curs-container {
+    width: 70%;
+    margin: auto;
+}
+
+.info-title{
+    padding-top: 55px;
+    padding-bottom: 50px;
+    height: auto;
+}
+
+.detalii-curs-motto {
+    color: black;
+}
+
+.info-title h2{
+    text-align: center;
+}
+
+    /* DETALII CURS -START */
+.info-curs-detalii{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.informatii-curs-sumar{
+    width: 25%;
+    -webkit-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
+    -moz-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
+    box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
+    border-radius: 3%;
+    background: #fff;
+    
+}
+
+.informatii-curs-sumar h3 {
+    text-align: center;
+    color: black;
+    padding:20px 0;
+}
+
+.informatii-curs-row{
+    /* font size-font-style */
+    display: flex;
+}
+
+.row-first-elem{
+    font-weight: bold;
+    width: 30%;
+    padding-left: 10%;
+}
+
+.row-second-elem {
+    width:60%;
+    text-align: start;
+    padding-left: 20%;
+  }
+
+.trainer-linkedin{
+    display: flex;
+    justify-content: space-between;
+}
+/* DETALII CURS -END */
+
+/* DESCRIERE CURS START */
+.descriere-curs{
+    width: 60%;
+}
+
+.descriere-curs h4{
+    font-weight: bold;
+}
+
+.descriere-cui-se-adreseaza{
+    padding-bottom: 20px;
+}
+
+.descriere-cui-se-adreseaza h4{
+    color: black;
+    padding-bottom: 10px;
+}
+
+/* DESCRIERE CURS ENDS */
+
+/* Info curs container ends */
+
+
+/* PROGRAMA CURS START */
+
+.programa-curs{
+    margin: auto;
+    width: 70%;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.detalii-programa {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.programa-curs-row{
+    width: 25%;
+    color: black;
+    -webkit-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
+    -moz-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
+    box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
+    border-radius: 3%;
+}
+
+.programa-curs-header {
+    padding-top: 20px;
+    display: flex;
+    color:black;
+    width:80%;
+    margin: auto;
+    justify-content: center;
+}
+
+.programa-curs-header h4{
+    padding: 20px 0;
+    font-weight: bold;
+    color: black;
+}
+
+.programa-curs-header i {
+    padding:25px 0 0 15px;
+}
+
+
+.lista-programa-curs{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.lista-programa-curs li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.web-basics{
+    display: flex;
+}
+
+.web-basics li {
+    width: 50%;
+}
+
+.web-basics div{
+    padding-top: 10px;
+}
+
+
+/* PROGRAMA CURS ENDS */
+
+/* DESCRIERE TRAINER START */
+.trainer-section{
+    background:black;
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 70px;
+}
+.descriere-trainer {
+    width:70%;
+    margin: auto;
+    color: white;
+}
+
+.descriere-trainer h2,h3,h4{
+    color:white;
+}
+
+.info-title span{
+    color: #e5003c
+}
+
+.trainer-row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.trainer-profile{
+    width:30%;
+}
+
+.trainer-delimitator {
+    height: 1px;
+    background: #959094;
+}
+
+.trainer-description{
+    width: 60%;
+}
+
+.trainer-description p{
+    color: #959094
+}
+
+.trainer-image-container{
+    width: 34%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.trainer-image {
+    border-radius:50%;
+    margin:auto;
+    width: 136px;
+    height: 136px;
+}
+
+.trainer-name{
+    width:50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.trainer-name h3{
+    text-align: center;
+}
+
+.trainer-description h4,p{
+    padding-bottom: 10px;
+}
+
+.trainer-short-description span{
+    padding-right: 10%;
+}
+
+.marketing-section-part1{
+    height: 50%;
+}
+
+.marketing-section-part2{
+    height: 50%;
+    display:
+}
+/* DESCRIERE TRAINER ENDS */
+
+/* INSCRIERE CURS START */
+
+.inscriere-curs-container{
+    display: flex;
+    padding-top:40px;
+    padding-bottom: 40px;
+    width: 70%;
+    margin: auto;
+}
+
+.inscriere-marketing-section{
+    width:49%;
+    background-color: lightgrey;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.inscriere-form-container{
+    width:49%;
+}
+
+.formular-inscriere{
+    width: 90%;
+    margin:20px auto;
+}
+
+.input-space{
+    margin-bottom: 20px;
+}
+
+.termeni-conditii{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.checkbox{
+    width: 2%;
+    margin-top: 5px;
+    margin-right:10px;
+}
+
+form label{
+    font-weight:bold;
+}
+
+.enroll-btn {
+    background-color: black;
+}
+
+.enroll-btn:hover {
+    cursor: pointer;
+    background-color: #e5003c!important;
+}
+/* INSCRIERE CURS END */
+
+/* FOOTER START */
+
+.footer {
+    padding-top: 40px;
+    background-color: black;
+}
+
+.footer-container {
+    width: 70%;
+    margin: auto;
+    color: white;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media, .contact-form {
+    width: 45%;
+    padding: 0 15px;
+}
+
+
+.copyright-message {
+    width: 100%;
+    margin: auto;
+}
+.copyright-message a{
+    color: #e5003c;
+}
+
+.social-media-paragraph{
+    text-align: left;
+    color: white;
+}
+
+.social-media-paragraph span{
+    color: #959094;
+}
+
+.submit-button {
+    width: 40%;
+    background-color: darkgrey;
+    float: right;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: #e5003c!important;
+}
+
+.footer-links {
+    margin: auto;
+}
+
+/* FOOTER END */
