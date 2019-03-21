@@ -2,9 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: catalin.rosu
- * Date: 06/03/2019
- * Time: 9:16 PM
+ * Date: 19/03/2019
+ * Time: 1:39 PM
  */
+
 
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
@@ -15,30 +16,37 @@ include_once '../config/Database.php';
 include_once '../models/Controler.php';
 include_once '../config/emailMsg.php';
 include_once '../config/Mail.php';
-
 $database = new Database();
 $db = $database->connect();
-
+error_reporting(E_ALL);
 // Instantiate controlerobj
 $controler= new Controler($db);
-
 // Get raw posted data
 $data = json_decode(file_get_contents("php://input"));
 
-$controler->title = $data->title;
-$controler->body = $data->body;
-$controler->author = $data->author;
-$controler->category_id = $data->category_id;
+if($data == null){
+    $controler->email = $_POST['email'];
+    $controler->msg = $_POST['msg'];
 
+}
+else {
+    $controler->email = $data->email;
+    $controler->msg = $data->msg;
+}
 // Create post
-if($controler->create()) {
+if($controler->contactUS() === true) {
 
-    echo json_encode(
-        array('message' => 'Post Created')
-    );
+    if ($controler->sendEmail($mesajContactUS,"rosucatalindorin@gmail.com","CONTACT US"))
+        echo json_encode(
+            array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
+        );
+    else
+        echo json_encode(
+            array('STATUS' => 'SUCCES',"EMAIL"=>"ERROR")
+        );
 } else {
     echo json_encode(
-        array('message' => 'Post Not Created')
+        array('STATUS' => $controler->contactUS())
     );
 }
 

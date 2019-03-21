@@ -20,7 +20,7 @@
 
 
   $post = new Controler($db);
-  $result = $post->read();
+  $result = $post->getCursuri();
   $num = $result->rowCount();
 
   if($num > 0) {
@@ -33,15 +33,9 @@
           $post_item = array(
               'curs_id' => $curs_id,
               'titlu_curs,' => $titlu_curs,
-              'tehnologii' => $tehnologii,
-              'data_start' => $data_start,
-              'data_end' => $data_end,
-              'msg_atentionare_date_start,' => $msg_atentionare_date_start,
-              'msg_pers_targetate' => $msg_pers_targetate,
-              'pret' => $pret,
-              'pret_reducere' => $pret_reducere,
-              'numar_total_ore' => $numar_total_ore,
-              'numar_ore_saptamana' => $numar_ore_saptamana
+              'durata_curs' => $durata_curs,
+              'poza_prezentare' => $poza_prezentare,
+              'nivel' => $nivel
           );
 
           // Push to "data"
