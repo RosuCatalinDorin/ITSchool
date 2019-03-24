@@ -35,6 +35,7 @@ if($data == null){
     $controler->nivel_engleza = $_POST['nivel_engleza'];
     $controler->info_marketing_source = $_POST['info_marketing_source'];
     $controler->accept_termeni_conditii = $_POST['accept_termeni_conditii'];
+    $controler->preclucrare_date_perosnale = $_POST['preclucrare_date_perosnale'];
 }
 else {
     $controler->curs_id = $data->curs_id;
@@ -48,10 +49,11 @@ else {
     $controler->nivel_engleza = $data->nivel_engleza;
     $controler->info_marketing_source = $data->info_marketing_source;
     $controler->accept_termeni_conditii = $data->accept_termeni_conditii;
+    $controler->preclucrare_date_perosnale = $data->preclucrare_date_perosnale;
 }
 // Create post
 if($controler->addCustomerToCourse() === true) {
-    if ($controler->sendEmail($mesajInscriere,$controler->email,"MULTUMIM PENTRU INSCRIERE"))
+    if ($controler->sendEmail($mesajInscriere,$controler->email,null,true,"Speak Programming"))
     echo json_encode(
         array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
     );

@@ -50,7 +50,7 @@
               'SUB_TITLU' => $SUB_TITLU,
               'NIVEL' => $NIVEL,
               'DATA_START' => $DATA_START,
-              'DURATA_CURS,' => $DURATA_CURS,
+              'DURATA_CURS' => $DURATA_CURS,
               'NUMAR_ORE_SAPTAMANA' => $NUMAR_ORE_SAPTAMANA,
               'NUMAR_TOTAL_ORE' => $NUMAR_TOTAL_ORE,
               'PRET' => $PRET,

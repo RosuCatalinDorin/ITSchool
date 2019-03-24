@@ -1,5 +1,6 @@
 <?php
 include_once '../config/Mail.php';
+session_start();
 class Controler {
     // DB stuff
     private $conn;
@@ -11,7 +12,7 @@ class Controler {
     public $data_end; public $msg_atentionare_date_start; public $msg_pers_targetate;
     public $pret; public $pret_reducere; public $numar_total_ore; public $numar_ore_saptamana;
     public $first_name; public $last_name; public $telefon; public $birthday; public $email;
-    public $cunostinte_it; public $profesie_actuala; public $nivel_engleza; public $info_marketing_source;
+    public $cunostinte_it; public $profesie_actuala; public $nivel_engleza; public $info_marketing_source; public $preclucrare_date_perosnale;
     public $accept_termeni_conditii; public $msg;
     // Constructor with DB
     public function __construct($db) {
@@ -20,7 +21,7 @@ class Controler {
     // Get Curs
     public function getCursuri() {
         // Create query
-        $query = 'SELECT curs_id,titlu_curs,durata_curs,poza_prezentare,nivel,scurta_descriere FROM curs';
+        $query = 'SELECT curs_id,titlu_curs,durata_curs,poza_prezentare,nivel,scurta_descriere,pret_reducere,pret FROM curs';
         // Prepare statement
         $connection = $this->conn;
         $stmt = $connection->prepare($query);
@@ -58,8 +59,8 @@ class Controler {
         // Prepare statement
         $queryUserID = 'SELECT MAX(user_id) as ID_USER from users';
 
-        $queryInsertMarkDet="INSERT INTO ".$this->tableMK."(user_id,  cunostinte_it, profesie_actuala, nivel_engleza, info_marketing_source, accept_termeni_conditii)
-                                                    values (:user_id,:cunostinte_it,:profesie_actuala,:nivel_engleza,:info_marketing_source,:accept_termeni_conditii)";
+        $queryInsertMarkDet="INSERT INTO ".$this->tableMK."(user_id,  cunostinte_it, profesie_actuala, nivel_engleza, info_marketing_source, accept_termeni_conditii,preclucrare_date_perosnale)
+                                                    values (:user_id,:cunostinte_it,:profesie_actuala,:nivel_engleza,:info_marketing_source,:accept_termeni_conditii,:preclucrare_date_perosnale)";
         $connection =  $this->conn;
         $connection->beginTransaction();
         try {
@@ -71,6 +72,15 @@ class Controler {
             $this->curs_id = htmlspecialchars(strip_tags($this->curs_id));
             $this->birthday = htmlspecialchars(strip_tags($this->birthday));
             // Bind data
+            if (!preg_match("/^[a-zA-Z ]*$/",$this->first_name)) {
+               return false;
+            }
+            if (!preg_match("/^[a-zA-Z ]*$/",$this->last_name)) {
+               return false;
+            }
+            if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+                    return "Adresa de email nu este valida" ;
+            }
             if($this->first_name==""){
                 $this->first_name = null;
             }
@@ -105,8 +115,9 @@ class Controler {
             $stmt = $connection->prepare($queryInsertMarkDet);
             $this->cunostinte_it = htmlspecialchars(strip_tags($this->cunostinte_it));
             $this->profesie_actuala = htmlspecialchars(strip_tags($this->profesie_actuala));
-            $this->nivel_engeleza = htmlspecialchars(strip_tags($this->nivel_engleza));
+            $this->nivel_engleza = htmlspecialchars(strip_tags($this->nivel_engleza));
             $this->info_marketing_source = htmlspecialchars(strip_tags($this->info_marketing_source));
+            $this->preclucrare_date_perosnale = htmlspecialchars(strip_tags($this->preclucrare_date_perosnale));
 
             if($this->cunostinte_it==""){
                 $this->cunostinte_it = null;
@@ -120,9 +131,18 @@ class Controler {
             if($this->info_marketing_source==""){
                 $this->info_marketing_source = null;
             }
-            if($this->info_marketing_source==""){
-                $this->info_marketing_source = null;
+            if($this->accept_termeni_conditii==""){
+                $this->accept_termeni_conditii = null;
             }
+            if($this->preclucrare_date_perosnale==""){
+                $this->preclucrare_date_perosnale = null;
+            }
+       /*     if (!is_bool($this->accept_termeni_conditii)){
+                return false;
+            }
+            if (!is_bool($this->preclucrare_date_perosnale)){
+                return false;
+            }*/
 
             $stmt->bindParam(':user_id', $ReSQLuserId['ID_USER']);
             $stmt->bindParam(':cunostinte_it', $this->cunostinte_it);
@@ -130,6 +150,7 @@ class Controler {
             $stmt->bindParam(':nivel_engleza', $this->nivel_engleza);
             $stmt->bindParam(':info_marketing_source', $this->info_marketing_source);
             $stmt->bindParam(':accept_termeni_conditii', $this->accept_termeni_conditii);
+            $stmt->bindParam(':preclucrare_date_perosnale', $this->preclucrare_date_perosnale);
             $stmt->execute();
             $connection->commit();
             return true;
@@ -157,12 +178,20 @@ class Controler {
         $stmt->execute();
         return true;
     }
-    public function sendEmail ($body,$email,$subject){
+    public function sendEmail ($body,$email,$mail2,$attach,$subject){
         $mail1 = new Mail();
         $mail =  $mail1->connectMail();
         $mail->addAddress($email);
+        if($mail2!= null){
+        $mail->addAddress($_SESSION["customer_name"]);
+        }
+
         $mail->Subject = $subject;
         $mail->msgHTML($body);
+        if($attach ){
+            $file_to_attach = 'PATH_OF_YOUR_FILE_HERE';
+            $mail->AddAttachment( $file_to_attach , '../../documents/Documentatie.pdf');
+        }
         if($mail->send())
             return true ;
         else

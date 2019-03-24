@@ -33,7 +33,9 @@
               'durata_curs' => $durata_curs,
               'poza_prezentare' => $poza_prezentare,
               'nivel' => $nivel,
-              'scurta_descriere'=>$scurta_descriere
+              'scurta_descriere'=>$scurta_descriere,
+              'pret'=>$pret,
+              'pret_reducere'=>$pret_reducere
           );
 
           // Push to "data"

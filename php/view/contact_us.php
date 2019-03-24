@@ -27,16 +27,17 @@ $data = json_decode(file_get_contents("php://input"));
 if($data == null){
     $controler->email = $_POST['email'];
     $controler->msg = $_POST['msg'];
-
+    $nameCustomer = $controler->email;
 }
 else {
     $controler->email = $data->email;
     $controler->msg = $data->msg;
+    $nameCustomer = $data->email;
 }
 // Create post
 if($controler->contactUS() === true) {
 
-    if ($controler->sendEmail($mesajContactUS,"rosucatalindorin@gmail.com","CONTACT US"))
+    if ($controler->sendEmail($mesajContactUS,"rosucatalindorin@gmail.com","pausan.ionut.adrian@gmail.com",false,"CONTACT US"))
         echo json_encode(
             array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
         );
