@@ -31,11 +31,11 @@
       while($row1 = $result1->fetch(PDO::FETCH_ASSOC)) {
           extract($row1);
           $post_item1 = array(
-              'NUME,' => $NUME,
+              'NUME' => $NUME,
               'PRENUME' => $PRENUME,
               'DESCRIERE' => $DESCRIERE,
               'POZA' => $POZA,
-              'PROFESIE,' => $PROFESIE,
+              'PROFESIE' => $PROFESIE,
               'LINKEDIN' => $LINKEDIN
           );
           // Push to "data"
@@ -46,7 +46,7 @@
       while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
           $post_item = array(
-              'TITLU_CURS,' => $TITLU_CURS,
+              'TITLU_CURS' => $TITLU_CURS,
               'SUB_TITLU' => $SUB_TITLU,
               'NIVEL' => $NIVEL,
               'DATA_START' => $DATA_START,
@@ -56,7 +56,7 @@
               'PRET' => $PRET,
               'MSG_ATENTIONARE_DATA_START' => $MSG_ATENTIONARE_DATA_START,
               'POZA_DESCRIERE' => $POZA_DESCRIERE,
-              'TRAIERI'=>$traineri_course
+              'TRAINERI'=>$traineri_course
           );
           // Push to "data"
           array_push($posts_arr, $post_item);
@@ -69,6 +69,6 @@
   } else {
       // No Posts
       echo json_encode(
-          array('message' => 'No Posts Found')
+          array('message' => 'No Cours Found')
       );
   }

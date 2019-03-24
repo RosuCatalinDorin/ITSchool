@@ -20,16 +20,29 @@ class Controler {
     // Get Curs
     public function getCursuri() {
         // Create query
-        $query = 'SELECT curs_id,titlu_curs,durata_curs,poza_prezentare,nivel FROM curs';
+        $query = 'SELECT curs_id,titlu_curs,durata_curs,poza_prezentare,nivel,scurta_descriere FROM curs';
         // Prepare statement
         $connection = $this->conn;
         $stmt = $connection->prepare($query);
         $stmt->execute();
         return $stmt;
     }
+    public function getCursById() {
+        // Create query
+        $query = 'SELECT C.titlu_curs as TITLU_CURS,C.sub_titlu AS SUB_TITLU, C.nivel AS NIVEL, GR.data_start AS DATA_START,C.durata_curs AS DURATA_CURS,C.numar_ore_saptamana AS NUMAR_ORE_SAPTAMANA,
+       C.numar_total_ore AS NUMAR_TOTAL_ORE, C.pret AS PRET,C.msg_atentionare_date_start AS MSG_ATENTIONARE_DATA_START,C.poza_descriere AS POZA_DESCRIERE 
+      FROM curs C
+           INNER JOIN grupa_studenti GR ON GR.curs_id = C.curs_id WHERE C.curs_id=:CURS_ID';
+        // Prepare statement
+        $connection = $this->conn;
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':CURS_ID', $this->curs_id);
+        $stmt->execute();
+        return $stmt;
+    }
     public function getTrainresByCourse() {
         // Create query
-        $query = 'SELECT t.nume as NUME,t.prenume AS PRENUME,t.descriere AS DESCRIERE,t.poza AS POZA, T.profesie AS PROFESIE, t.linkedin AS LINKEDIN FROM traineri t
+        $query = 'SELECT t.nume as NUME,t.prenume AS PRENUME,t.descriere AS DESCRIERE,t.poza AS POZA, t.profesie AS PROFESIE, t.linkedin AS LINKEDIN FROM traineri t
                   INNER JOIN connection_traineri_curs ctc on t.trainer_id = ctc.trainer_id where ctc.curs_id=:CURS_ID';
         // Prepare statement
         $connection = $this->conn;

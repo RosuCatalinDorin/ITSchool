@@ -16,9 +16,6 @@
   $database = new Database();
   $db = $database->connect();
 
-
-
-
   $post = new Controler($db);
   $result = $post->getCursuri();
   $num = $result->rowCount();
@@ -32,10 +29,11 @@
 
           $post_item = array(
               'curs_id' => $curs_id,
-              'titlu_curs,' => $titlu_curs,
+              'titlu_curs' => $titlu_curs,
               'durata_curs' => $durata_curs,
               'poza_prezentare' => $poza_prezentare,
-              'nivel' => $nivel
+              'nivel' => $nivel,
+              'scurta_descriere'=>$scurta_descriere
           );
 
           // Push to "data"
