@@ -3,10 +3,32 @@
     -moz-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
     box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
 }
+/* insert focus from js
+.card-focus {
+    background-color: rgb(255, 255, 255);
+    transform: translateZ(0px);
+    will-change: transform;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0.1rem 0.3rem, rgba(0, 0, 0, 0.05) 0px 0.1rem 0.2rem, rgba(0, 0, 0, 0.05) 0px 0.5rem 1.5rem;
+    transition: all 0.25s ease-out 0s;
+    border-radius: 0.3rem;
+} */
+
+.courseDetails {
+    color: white!important;
+}
+
+.courseDetails:hover {
+    cursor: pointer;
+}
+
+.nav-bar-container {
+    width: 70%;
+    margin:0 auto;
+}
 
 .course-image-container {
     width: 100%;
-    height: 30%;
+    height: 37%;
     content: url("../images/headerbk.jpg");
 }
 
@@ -18,6 +40,7 @@
     border-bottom:1px solid #dad9d9;
     background: #f2f2f2;
 }
+
 
 .section-home-curs {
     border-bottom:1px solid #dad9d9;
@@ -46,3 +69,78 @@
     background: black;
 }
 
+.btn-course {
+    border-radius: 3px;
+    background-color: black;
+    border: 0;
+    font-weight: 500;
+    color: #fff;
+}
+
+.btn-course:hover {
+    background-color: black;
+    color: #fff;
+    background-color: #e5003c;
+}
+
+.curs-title {
+    color: #bf0039;
+    font-size: 19px;
+}
+/*Start css despre noi*/
+.section-despre-noi {
+    border-bottom: 1px solid #dad9d9;
+    background-image: url("../images/banner.jpg");
+    height: auto;
+}
+.section-despre-noi-flex{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.section-despre-noi-content{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+}
+.despre-noi-div-descriere{
+    margin-right: 40px;
+    color:black;
+    width: 300px;
+}
+.despre-noi-text-descriere{
+    text-align: left;
+    height: 250px;
+}
+.margin-div{
+    border-right: 4px solid rgba(183, 173, 173, 0.31);
+    height: 250px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .section-despre-noi-flex {
+        display: block;
+    }
+    .margin-div{
+        border-right: 0;
+    }
+}
+ /*emd css despre noi*/
+.list-group {
+    padding-bottom: 40px;
+}
+
+.btn-light {
+    border-radius: 3px;
+    background: #FFF;
+    box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.26);
+    font-size: 14px;
+    font-weight: 500;
+    color: #e60508;
+    margin: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    line-height: 1.8;
+}

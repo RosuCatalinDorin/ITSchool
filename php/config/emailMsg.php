@@ -294,7 +294,7 @@ $mesajInscriere="
 
                 <!-- START CENTERED WHITE CONTAINER -->
                 <table role=\"presentation\" class=\"main\">
-                    <div style=\"text-align:center\">        <img src=\"../../images/logo1.PNG\">  </div>
+                    <div style=\"text-align:center\">        <img src=\"https://speakprogramming.ro/template/images/logoRED4.png\">  </div>
 
                     <!-- START MAIN CONTENT AREA -->
                     <tr>
@@ -313,7 +313,7 @@ $mesajInscriere="
                                             <a href=\"https://www.facebook.com/Speak-programming-1995720327193287\" class=\"fa fa-facebook\"></a>
 
                                         </div>
-                                        <div style=\"text-align: center;\"><img style=\"height: 60px; width: 60px;\" src=\"../../images/logoRED4Sus.png\">  </div>
+                                        <div style=\"text-align: center;\"><img style=\"height: 60px; width: 60px;\" src=\"https://speakprogramming.ro/template/images/head.png\">  </div>
 
                                     </td>
                                 </tr>
@@ -649,9 +649,9 @@ $mesajContactUS ="
                             <table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">
                                 <tr>
                                     <td>
-                                        <h2>Salut ".$_SESSION["customer_name"].",</h2>
-                                        <p>Iti multumim pentru incredere!</p>
-                                        <p>In cel mai scurt timp vei fi contactat de unul dintre traineri nostri.</p>
+                                        <h2>Salut ".$_SESSION["customer_name"]."</h2>
+                                        <p>Ai un mesaj nou.</p>
+                                        <p>Mesajul este salvat in baza de date.</p>
                                         <p>Cu prietenie,</p>
                                         <p>Echipa Speak Programming</p>
                                            <div  style=\"text-align: center;\">
