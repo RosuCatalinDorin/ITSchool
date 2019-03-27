@@ -1,0 +1,20 @@
+:root {
+    --main-bg-color: #181818; 
+    --main-header-color: #e0e0e0;
+    --main-red-color: #e5003c;
+    --main-paragraph-color: #8c8c8c;
+    --card-bk-color: #2e2d2d;
+    --black: #000;
+    --white: #fff;
+    --nav-bk: rgba(0, 0, 0, 0.85);
+    /* FONTS */
+    --main-h1-size: 70px;
+    --main-small-font-size: 20px;
+    --btn-font-size: 18px;;
+    --btn-font-size-hover: 19px;
+    /* DIMENSIONS */
+    --main-content-width: 70%;
+    --main-border-container:  1px solid #7a7a7a54;
+    --full-dimension: 100%;
+
+  }

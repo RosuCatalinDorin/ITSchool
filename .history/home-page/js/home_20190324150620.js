@@ -1,0 +1,7 @@
+$( document ).ready(function() {
+    console.log();
+    
+    homeService.getCourses().then(function(courses) {
+        $('.courses').html(courses);
+    })
+});
