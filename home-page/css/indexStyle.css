@@ -18,10 +18,6 @@ html {
         width: 100%;
         display: block;
     }
-
-    .border-bottom{
-        height: 600px;
-    }
 }
 
 .card {
