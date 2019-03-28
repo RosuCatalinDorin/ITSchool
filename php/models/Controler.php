@@ -52,6 +52,16 @@ class Controler {
         $stmt->execute();
         return $stmt;
     }
+    public function tehnologisByCourse() {
+        // Create query
+        $query = 'SELECT tehnologie from curs_tech where curs_id=:CURS_ID';
+        // Prepare statement
+        $connection = $this->conn;
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':CURS_ID', $this->curs_id);
+        $stmt->execute();
+        return $stmt;
+    }
     // CreateUsers
     public function addCustomerToCourse() {
         $query = "INSERT INTO ". $this->tableUsers." ( first_name, last_name, phone, curs_id, email, birthday) values

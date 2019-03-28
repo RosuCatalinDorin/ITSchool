@@ -488,6 +488,100 @@ form label{
    .contact-form h1 {
        text-align: center;
    }
+  /* css start */
+  .detalii-curs-titlu {
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
+
+  .info-title h2 {
+        text-align: center;
+        font-size: 23px;
+    }
+
+  .info-curs-detalii {
+        display: block;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+  .info-curs-container {
+        width: var(--main-content-width-mobile);
+        margin: auto;
+    }
+  .informatii-curs-sumar {
+        width: 100%;
+        border-radius: 3%;
+        background: var(--card-bk-color);
+    }
+    .descriere-curs {
+        width: 100%;
+    }
+    .descriere-cui-se-adreseaza{
+        margin-top: 30px;
+    }
+    .detalii-programa {
+        width: var(--full-dimension);
+        display: block;
+        justify-content: space-between;
+    }
+    .programa-curs-row {
+        width: 100%;
+        border-radius: 3%;
+        background: var(--card-bk-color);
+        margin-bottom: 40px;
+    }
+    .programa-curs {
+        margin: auto;
+        width: var(--main-content-width-mobile);
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+    .trainer-row {
+        margin-top: 40px;
+        display: block;
+        justify-content: center;
+    }
+    .trainer-profile {
+        width: 100%;
+    }
+    .info-title {
+        padding-top: 55px;
+        padding-bottom: 0;
+        font-size: 50px;
+        height: auto;
+    }
+    .trainer-description {
+        width: 100%;
+    }
+    .trainer-image-container {
+        width: 34%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .trainer-image {
+        border-radius: 50%;
+      /*  todo: vezi aici cu margi ca nu resuesc sa o centrez decat cu tigania asta adica margin -30px*/
+        margin-left: -30px;
+        width: 136px;
+        height: 136px;
+    }
+    .trainer-name {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .inscriere-curs-container {
+        display: block;
+        width: var(--main-content-width-mobile);
+        margin: auto;
+    }
+    .inscriere-marketing-section{
+        width: 100%;
+    }
+    .inscriere-form-container{
+        width: 100%;
+    }
 }
 
 .red {

@@ -4,7 +4,121 @@ $(document).ready(function() {
     displayCourseDetailsInPage(course[0]);
   });
 
+
+  // VAR GLOBALE
+
+  let firstNameErr = $('.firstname-error-msg');
+  let lastNameErr = $('.lastname-error-msg');
+  let dateErr = $('.date-error-msg');
+  let knowledgeErr = $('.knowledge-error-msg');
+  let emailErr = $('.email-error-msg');
+  let phoneErr = $('.phone-error-msg');
+  let industryErr = $('.industry-error-msg');
+  let messageToBeDisplayed = $(".message-after-enroll");
+
+  // VAR GLOBALE
+
 // START ENROLL SECTION
+  $(".first-name").change(function(){
+    let isFirstName = ValidateInputs.validateFirstName($(".first-name").val());
+
+    if(typeof isFirstName === "string") {
+      firstNameErr.html(isFirstName).fadeIn().addClass("red").fadeOut();
+      return false;
+    }
+    firstNameErr.fadeOut();
+
+  });
+
+  $(".last-name").change(function(){
+  let isLastName = ValidateInputs.validateName($(".last-name").val());
+    if(typeof isLastName === "string") {
+      lastNameErr.html(isLastName).fadeIn().addClass("red");
+      return false;
+    }
+    lastNameErr.fadeOut();
+  });
+
+  $(".date-input").change(function(){
+  let isDate = ValidateInputs.validateDate($(".date-input").val());
+
+    if(typeof isDate === "string") {
+      dateErr.html(isDate).fadeIn().addClass("red");
+      return false;
+    }
+
+    dateErr.fadeOut();
+  });
+
+  $(".it-knowledge").change(function(){
+  let itKnowledge = ValidateInputs.validateItKnowledge($(".it-knowledge").val());
+
+    if(typeof itKnowledge === "string") {
+      knowledgeErr.html(itKnowledge).fadeIn().addClass("red");
+      return false;
+    }
+
+    knowledgeErr.fadeOut();
+  });
+
+  $(".email").change(function(){
+  let isEmail = ValidateInputs.validateEmail($(".email").val());
+
+    if(typeof isEmail === "string") {
+      emailErr.html(isEmail).fadeIn().addClass("red");
+      return false;
+    }
+
+    emailErr.fadeOut();
+  });
+
+  $(".phone").change(function(){
+  let isPhone = ValidateInputs.validatePhoneNumber($(".phone").val());
+
+    if(typeof isPhone === "string") {
+      phoneErr.html(isPhone).fadeIn().addClass("red");
+      return false;
+    }
+    phoneErr.fadeOut();
+
+  });
+
+  $(".industry").change(function(){
+  let isIndustry = ValidateInputs.validateIndustry($(".industry").val());
+
+    if(typeof isIndustry === "string") {
+      industryErr.html(isIndustry).fadeIn().addClass("red");
+      return false;
+    }
+
+    industryErr.fadeOut();
+  });
+
+  $(".checkbox").change(function(){
+  let isChecked = ValidateInputs.validateCheckbox($(".checkbox")[0].checked)
+  let messageToBeDisplayed = $(".message-after-enroll");
+
+    if(typeof isChecked === "string") {
+      messageToBeDisplayed.html(isChecked).fadeIn().addClass("red");
+      return false;
+    }
+
+    messageToBeDisplayed.fadeOut();
+  });
+
+  $(".english-level").change(function(){
+  let isEnglishLevel = ValidateInputs.onlyLettersAllowed($(".english-level").val());
+  let messageToBeDisplayed = $(".message-after-enroll");
+
+    if(typeof isEnglishLevel === "string") {
+      messageToBeDisplayed.html(isEnglishLevel).fadeIn().addClass("red");
+      return false;
+    }
+
+    messageToBeDisplayed.fadeOut();
+  });
+
+  
 
   $(".enroll-btn").on("click", function() {
     if(validateEnrollForm()) {
@@ -15,9 +129,8 @@ $(document).ready(function() {
   });
 
   let validateEnrollForm = function() {
-    
+    debugger;
     let messageToBeDisplayed = $(".message-after-enroll");
-
     let isFirstName = ValidateInputs.validateFirstName($(".first-name").val());
     let isLastName = ValidateInputs.validateName($(".last-name").val());
     let isDate = ValidateInputs.validateDate($(".date-input").val());
@@ -28,62 +141,88 @@ $(document).ready(function() {
     let isEnglishLevel = ValidateInputs.onlyLettersAllowed($(".english-level").val());
     let isChecked = ValidateInputs.validateCheckbox($(".checkbox")[0].checked)
 
+    let firstNameErr = $('.firstname-error-msg');
+    let lastNameErr = $('.lastname-error-msg');
+    let dateErr = $('.date-error-msg');
+    let knowledgeErr = $('.knowledge-error-msg');
+    let emailErr = $('.email-error-msg');
+    let phoneErr = $('.phone-error-msg');
+    let industryErr = $('.industry-error-msg');
+
+
     if(typeof isFirstName === "boolean" & typeof isLastName === "boolean" & typeof isDate === "boolean" & typeof itKnowledge === "boolean" &
       typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
       typeof isChecked === "boolean"){ 
-
         return true; 
     }
 
     if(typeof isFirstName === "string") {
-      messageToBeDisplayed.html(isFirstName).fadeIn().addClass("red");
+      firstNameErr.html(isFirstName).fadeIn().addClass("red").fadeOut();
       return false;
     }
+
+    firstNameErr.fadeOut();
 
     if(typeof isLastName === "string") {
-      messageToBeDisplayed.html(isLastName).fadeIn().addClass("red");
+      lastNameErr.html(isLastName).fadeIn().addClass("red");
       return false;
     }
+
+    lastNameErr.fadeOut();
 
     if(typeof isDate === "string") {
-      messageToBeDisplayed.html(isDate).fadeIn().addClass("red");
+      dateErr.html(isDate).fadeIn().addClass("red");
       return false;
     }
+
+    dateErr.fadeOut();
 
     if(typeof itKnowledge === "string") {
-      messageToBeDisplayed.html(itKnowledge).fadeIn().addClass("red");
+      knowledgeErr.html(itKnowledge).fadeIn().addClass("red");
       return false;
     }
+
+    knowledgeErr.fadeOut();
 
     if(typeof isEmail === "string") {
-      messageToBeDisplayed.html(isEmail).fadeIn().addClass("red");
+      emailErr.html(isEmail).fadeIn().addClass("red");
       return false;
     }
+
+    emailErr.fadeOut();
 
     if(typeof isPhone === "string") {
-      messageToBeDisplayed.html(isPhone).fadeIn().addClass("red");
+      phoneErr.html(isPhone).fadeIn().addClass("red");
       return false;
     }
 
+    phoneErr.fadeOut();
+
     if(typeof isIndustry === "string") {
-      messageToBeDisplayed.html(isIndustry).fadeIn().addClass("red");
+      industryErr.html(isIndustry).fadeIn().addClass("red");
       return false;
     }
+
+    industryErr.fadeOut();
     
     if(typeof isEnglishLevel === "string") {
       messageToBeDisplayed.html(isEnglishLevel).fadeIn().addClass("red");
       return false;
     }
 
+    messageToBeDisplayed.fadeOut();
+
     if(typeof isChecked === "string") {
       messageToBeDisplayed.html(isChecked).fadeIn().addClass("red");
       return false;
     }
+
+    messageToBeDisplayed.fadeOut();
   }
 
   let enrollCoursePayload = function() {
     return {
-        curs_id: 4,
+        curs_id: window.localStorage.getItem("curs_id"),
         first_name: $(".first-name").val(),
         last_name: $(".last-name").val(),
         data_nasterii: $(".date-input").val(),
@@ -118,6 +257,7 @@ $(document).ready(function() {
 
   let validateContactForm = function(isEmailValid, isMessageValid, messageToBeDisplayed) {
     let emailErrorMsg = $('.email-after-submit');
+
     if(typeof isMessageValid === "boolean" & typeof isEmailValid === "boolean"){ 
       return true; 
     }
@@ -187,7 +327,7 @@ $(document).ready(function() {
 
         html += "<div class='trainer-description'>";    
         html += "<h4>Descriere trainer</h4>";
-        html += "<p>"+ trainer.DESCRIERE +"<br> De ce ai nevoie este de o motivatie puternica,gandire  logica si cacaturi </p>";
+        html += "<p>"+ trainer.DESCRIERE +" </p>";
         html += "<div class='trainer-short-description'>";
         html += "<a href='" + trainer.LINKEDIN + "'><span>linkedin</span></a>";
         html += "<span>"+ trainer.PROFESIE +"</span>";

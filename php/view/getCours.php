@@ -26,8 +26,10 @@
       $posts_arr = array();
       // $posts_arr['data'] = array();
       $traineri_course = array();
+      $teh_course =array();
       $result1 = $post->getTrainresByCourse();
-
+      $result2 = $post->tehnologisByCourse();
+      // fatch traineri
       while($row1 = $result1->fetch(PDO::FETCH_ASSOC)) {
           extract($row1);
           $post_item1 = array(
@@ -42,7 +44,13 @@
           array_push($traineri_course, $post_item1);
           // array_push($posts_arr['data'], $post_item);
       }
-
+      $teh_course =array();
+      //fatch tehnologii
+      $result4 = $result2->fetchAll(PDO::FETCH_ASSOC);
+    for($i=0 ;$i<$result2->rowCount(); $i++){
+        array_push($teh_course, $result4[$i]['tehnologie']);
+    }
+      //fatch tehnol
       while($row = $result->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
           $post_item = array(
@@ -56,7 +64,8 @@
               'PRET' => $PRET,
               'MSG_ATENTIONARE_DATA_START' => $MSG_ATENTIONARE_DATA_START,
               'POZA_DESCRIERE' => $POZA_DESCRIERE,
-              'TRAINERI'=>$traineri_course
+              'TRAINERI'=>$traineri_course,
+              "TEHNOLOGII"=>$teh_course
           );
           // Push to "data"
           array_push($posts_arr, $post_item);
@@ -65,6 +74,9 @@
 
       // Turn to JSON & output
       echo json_encode($posts_arr);
+
+
+
 
   } else {
       // No Posts
