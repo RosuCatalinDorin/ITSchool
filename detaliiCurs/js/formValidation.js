@@ -22,6 +22,12 @@ var ValidateInputs = (function() {
     if (message == "") {
       return "Va rog completati sectiunea 'Cunostinte in It'!";
     }
+
+
+    if(message[0] === "`" || message[0] === "<" || message[0] === "=") {
+      return "Mesajul nu poate sa inceapa cu caractere special precum '`', '<' sau '='!"
+    }
+
     return true;
   };
 
@@ -32,7 +38,7 @@ var ValidateInputs = (function() {
 
     re = /^\w+$/;
     if (!re.test(name)) {
-      return "Numele poate sa contina doar litere, numere sau underscores!";
+      return "Prenumele poate sa contina doar litere, numere sau underscore!";
     }
 
     return true;
@@ -45,21 +51,20 @@ var ValidateInputs = (function() {
 
     re = /^\w+$/;
     if (!re.test(name)) {
-      return "Numele poate sa contina doar litere, numere sau underscores!";
+      return "Numele poate sa contina doar litere, numere sau underscore!";
     }
 
     return true;
   };
 
   var validateIndustry = function(industry) {
-    if (name == "") {
+    if (industry === "") {
       return "Te rugam sa introduci industria din care provii.";
     }
 
-    
-    // if () {
-    //   return "Numele poate sa contina doar litere, numere sau underscores!";
-    // }
+    if(industry[0] === "`" || industry[0] === "<" || industry[0] === "=") {
+      return "Acest camp nu poate sa contina caractere special precum '`', '<' sau '='!"
+    }
 
     return true;
   };
@@ -67,15 +72,6 @@ var ValidateInputs = (function() {
   var validateDate = function(date) {
     if (date === "") {
       return "Data nasterii trebuie selectata.";
-    }
-    // var now = new Date().now;
-    // if(date > now) {
-
-    // }303 221 6493#
-
-    var re = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
-    if(!re.test(String(date).toLowerCase())) {
-      return ;
     }
 
     return true;
@@ -90,8 +86,7 @@ var ValidateInputs = (function() {
         return "Te rugam sa introduci un numar de telefon valid."
     }
 
-    var re = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
-    if (!re.test(String(phoneNumber).toLowerCase())) {
+    if (parseInt(phoneNumber) === NaN) {
         return "Te rugam sa introduci un numar de telefon valid.";
     }
 
@@ -109,6 +104,7 @@ var ValidateInputs = (function() {
 
     return true;
   }
+
   var onlyLettersAllowed = function(str) {
     var re = /^[a-zA-Z]+$/;
     if(!re.test(String(str).toLowerCase())) {

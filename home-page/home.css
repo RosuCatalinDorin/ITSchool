@@ -179,6 +179,9 @@
 }
 
 @media (max-width:992px) {
+    .nav-bar-container{
+        width: 100%;
+    }
     .home-header {
         height: 680px;
     }
@@ -215,4 +218,15 @@
     }
     
 }
+
+.fa-facebook-square {
+    font-size: 28px;
+}
+
+.fa-facebook-square:hover {
+    color: #4267b2;
+    cursor: pointer;
+    font-size: 29px;
+}
+
 
