@@ -111,16 +111,6 @@
     display: flex;
     justify-content: space-between;
 }
-
-
-.trainer-linkedin i {
-    padding-top: 8px;
-}
-
-.trainer-linkedin i:hover {
-    color: blue;
-    cursor: pointer;
-}
 /* DETALII CURS -END */
 
 /* DESCRIERE CURS START */
@@ -274,7 +264,8 @@
 }
 
 .trainer-name{
-    width:66%;
+    width:50%;
+    margin: auto;
     margin-bottom: 20px;
 }
 
@@ -577,6 +568,7 @@ form label{
     }
     .trainer-name {
         width: 100%;
+        margin: auto;
         margin-bottom: 20px;
     }
     .inscriere-curs-container {
