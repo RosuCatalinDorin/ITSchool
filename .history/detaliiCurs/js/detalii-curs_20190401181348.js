@@ -146,11 +146,7 @@ $(document).ready(function() {
       typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
       typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
-<<<<<<< HEAD
-        return true;
-=======
         return true; 
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
     }
 
     if(typeof isFirstName === "string") {
@@ -344,7 +340,7 @@ $(document).ready(function() {
         html += "<div class='trainer-profile'>";
         html += "<div class='trainer-image-container'>";
         html += "<img src='"+ trainer.POZA +"' class='trainer-image' alt='Ionut Pausan Pic'>";
-        html += "</div>";
+        html += "</div>"
         html += "<div class='trainer-name display-center'>";
         html += "<h3>" + trainer.NUME + " " +trainer.PRENUME + "</h3>";
         html += "</div>";
@@ -359,6 +355,8 @@ $(document).ready(function() {
         html += "</div>";
         html += "</div>";
 
+        html += "</div>";
+        html += "<div style='width:100%;height:1px; border:1px solid grey;'>";
         html += "</div>";
     });
     $('.trainer-container').html(html);

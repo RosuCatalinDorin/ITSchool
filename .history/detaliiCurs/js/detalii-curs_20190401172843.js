@@ -146,11 +146,7 @@ $(document).ready(function() {
       typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
       typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
-<<<<<<< HEAD
-        return true;
-=======
         return true; 
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
     }
 
     if(typeof isFirstName === "string") {
@@ -219,14 +215,12 @@ $(document).ready(function() {
   }
 
   let enrollCoursePayload = function() {
-    let dataNasterii = $(".date-input").val().split("/");
-    dataNasterii = dataNasterii[2] + "-" + dataNasterii[0] + "-" + dataNasterii[1];
     return {
         // curs_id: window.localStorage.getItem("curs_id"),
         curs_id: '4',
         first_name: $(".first-name").val(),
         last_name: $(".last-name").val(),
-        data_nasterii: dataNasterii,
+        data_nasterii: $(".date-input").val(),
         cunostinte_it: $(".it-knowledge").val(),
         email: $(".email").val(),
         telefon: $(".phone").val(),
@@ -266,8 +260,8 @@ $(document).ready(function() {
 
   $(".submit-button-footer").on("click", function(ev) {
     ev.preventDefault();
-    let isMessageValid = ValidateInputs.validateContactMessage($(".message-footer").val());
-    let isEmailValid = ValidateInputs.validateEmail($(".email-footer").val());
+    let isMessageValid = ValidateInputs.validateContactMessage($(".mesaj-input").val());
+    let isEmailValid = ValidateInputs.validateEmail($(".email-input").val());
     let messageToBeDisplayed = $(".message-after-submit");
 
     if(validateContactForm(isEmailValid, isMessageValid, messageToBeDisplayed)) {
@@ -302,8 +296,8 @@ $(document).ready(function() {
 
   var sendEmailPayload = function () {
     return {
-        email: $(".email-footer").val(),
-        msg: $(".message-footer").val()
+        email: $(".email-input").val(),
+        msg: $(".mesaj-input").val()
     };
   }
 
@@ -314,7 +308,7 @@ $(document).ready(function() {
   displayCourseDetailsInPage = function(course) {
     $('.detalii-curs-titlu').html(course.TITLU_CURS);
     $('.detalii-curs-motto').html(course.SUB_TITLU);
-    $('.nivel-curs').html(course.NIVEL);
+    $('nivel-curs').html(course.NIVEL);
     $('.data-start-curs').html(course.DATA_START);
     $('.durata-curs').html(course.DURATA_CURS);
     $('.numar-ore-sapt-curs').html(course.NUMAR_ORE_SAPTAMANA +" ore/saptamana");
@@ -344,8 +338,8 @@ $(document).ready(function() {
         html += "<div class='trainer-profile'>";
         html += "<div class='trainer-image-container'>";
         html += "<img src='"+ trainer.POZA +"' class='trainer-image' alt='Ionut Pausan Pic'>";
-        html += "</div>";
-        html += "<div class='trainer-name display-center'>";
+        html += "</div>"
+        html += "<div class='trainer-name'>";
         html += "<h3>" + trainer.NUME + " " +trainer.PRENUME + "</h3>";
         html += "</div>";
         html += "</div>";
@@ -356,10 +350,10 @@ $(document).ready(function() {
         html += "<div class='trainer-short-description'>";
         html += "<a href='" + trainer.LINKEDIN + "'><span>linkedin</span></a>";
         html += "<span>"+ trainer.PROFESIE +"</span>";
-        html += "</div>";
-        html += "</div>";
+        html += "</div>"
+        html += "</div>"
 
-        html += "</div>";
+        html += "</div>"
     });
     $('.trainer-container').html(html);
   }

@@ -36,11 +36,7 @@ var ValidateInputs = (function() {
       return "Va rog completati sectiunea 'Cunostinte in It'!";
     }
 
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
     if(message[0] === "`" || message[0] === "<" || message[0] === "=") {
       return "Mesajul nu poate sa inceapa cu caractere special precum '`', '<' sau '='!"
     }
@@ -83,12 +79,6 @@ var ValidateInputs = (function() {
   };
 
   var validateIndustry = function(industry) {
-<<<<<<< HEAD
-    if (industry === "") {
-      return "Te rugam sa introduci industria din care provii.";
-    }
-
-=======
     if(!industry) {
       return "Te rugam sa introduci industria din care provii.";
     }
@@ -97,7 +87,6 @@ var ValidateInputs = (function() {
       return "Te rugam sa introduci industria din care provii.";
     }
 
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
     if(industry[0] === "`" || industry[0] === "<" || industry[0] === "=") {
       return "Acest camp nu poate sa contina caractere special precum '`', '<' sau '='!"
     }
@@ -106,25 +95,14 @@ var ValidateInputs = (function() {
   };
 
   var validateDate = function(date) {
-    if(!date) {
-      return "Data nasterii trebuie selectata.";
-    }
-<<<<<<< HEAD
-=======
-
     if (date === "") {
       return "Data nasterii trebuie selectata.";
     }
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
 
     return true;
   };
 
   var validatePhoneNumber = function(phoneNumber) {
-    if(!phoneNumber) {
-      return "Data nasterii trebuie selectata.";
-    }
-
     if(phoneNumber === "") {
         return "Te rugam sa introduci numarul de telefon.";
     }

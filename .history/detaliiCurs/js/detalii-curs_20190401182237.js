@@ -146,11 +146,7 @@ $(document).ready(function() {
       typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
       typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
-<<<<<<< HEAD
-        return true;
-=======
         return true; 
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
     }
 
     if(typeof isFirstName === "string") {
@@ -358,8 +354,13 @@ $(document).ready(function() {
         html += "<span>"+ trainer.PROFESIE +"</span>";
         html += "</div>";
         html += "</div>";
+        html += "<hr>";
+        html += "<hr>";
 
+        html += "<div style='width:100%;height:1px; border:var(--main-border-container);'>";
         html += "</div>";
+        html += "</div>";
+      
     });
     $('.trainer-container').html(html);
   }

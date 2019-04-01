@@ -146,11 +146,7 @@ $(document).ready(function() {
       typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
       typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
-<<<<<<< HEAD
-        return true;
-=======
         return true; 
->>>>>>> 836723c09cbf4acabf9efe359730da9be7aa6b8f
     }
 
     if(typeof isFirstName === "string") {
@@ -360,6 +356,9 @@ $(document).ready(function() {
         html += "</div>";
 
         html += "</div>";
+        html += "<hr>";
+        html += "<hr>";
+
     });
     $('.trainer-container').html(html);
   }

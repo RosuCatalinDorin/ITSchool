@@ -276,10 +276,8 @@
 .trainer-name{
     width:66%;
     margin-bottom: 20px;
-}
-
-.display-center {
     margin: 0 auto;
+
 }
 
 .trainer-name h3{
@@ -606,7 +604,4 @@ form label{
     padding-bottom: 0;
 }
 
-
 /* FOOTER END */
-
-    

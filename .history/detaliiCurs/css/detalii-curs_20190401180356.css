@@ -112,7 +112,6 @@
     justify-content: space-between;
 }
 
-
 .trainer-linkedin i {
     padding-top: 8px;
 }
@@ -274,12 +273,9 @@
 }
 
 .trainer-name{
-    width:66%;
+    width:50%;
+    margin: auto;
     margin-bottom: 20px;
-}
-
-.display-center {
-    margin: 0 auto;
 }
 
 .trainer-name h3{
@@ -606,7 +602,4 @@ form label{
     padding-bottom: 0;
 }
 
-
 /* FOOTER END */
-
-    
