@@ -79,10 +79,6 @@ var ValidateInputs = (function() {
   };
 
   var validateIndustry = function(industry) {
-    if(!industry) {
-      return "Te rugam sa introduci industria din care provii.";
-    }
-
     if (industry === "") {
       return "Te rugam sa introduci industria din care provii.";
     }
@@ -95,10 +91,6 @@ var ValidateInputs = (function() {
   };
 
   var validateDate = function(date) {
-    if(!date) {
-      return "Data nasterii trebuie selectata.";
-    }
-
     if (date === "") {
       return "Data nasterii trebuie selectata.";
     }
@@ -107,10 +99,6 @@ var ValidateInputs = (function() {
   };
 
   var validatePhoneNumber = function(phoneNumber) {
-    if(!phoneNumber) {
-      return "Data nasterii trebuie selectata.";
-    }
-
     if(phoneNumber === "") {
         return "Te rugam sa introduci numarul de telefon.";
     }

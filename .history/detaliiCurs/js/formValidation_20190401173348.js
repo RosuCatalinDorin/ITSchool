@@ -4,7 +4,6 @@ var ValidateInputs = (function() {
     if(!email) {
       return "Email-ul este obligatoriu!";
     }
-
     if (email == "") {
       return "Email-ul este obligatoriu!";
     }
@@ -28,10 +27,6 @@ var ValidateInputs = (function() {
   };
 
   validateItKnowledge = function(message) {
-    if(!message) {
-      return "Va rog completati sectiunea 'Cunostinte in It'!";
-    }
-
     if (message == "") {
       return "Va rog completati sectiunea 'Cunostinte in It'!";
     }
@@ -45,10 +40,6 @@ var ValidateInputs = (function() {
   };
 
   var validateFirstName = function(name) {
-    if(!name) {
-      return "Prenumele trebuie completat.";
-    }
-
     if (name == "") {
       return "Prenumele trebuie completat.";
     }
@@ -62,10 +53,6 @@ var ValidateInputs = (function() {
   }
 
   var validateName = function(name) {
-    if(!name) {
-      return "Numele trebuie completat.";
-    }
-
     if (name == "") {
       return "Numele trebuie completat.";
     }
@@ -79,10 +66,6 @@ var ValidateInputs = (function() {
   };
 
   var validateIndustry = function(industry) {
-    if(!industry) {
-      return "Te rugam sa introduci industria din care provii.";
-    }
-
     if (industry === "") {
       return "Te rugam sa introduci industria din care provii.";
     }
@@ -95,10 +78,6 @@ var ValidateInputs = (function() {
   };
 
   var validateDate = function(date) {
-    if(!date) {
-      return "Data nasterii trebuie selectata.";
-    }
-
     if (date === "") {
       return "Data nasterii trebuie selectata.";
     }
@@ -107,10 +86,6 @@ var ValidateInputs = (function() {
   };
 
   var validatePhoneNumber = function(phoneNumber) {
-    if(!phoneNumber) {
-      return "Data nasterii trebuie selectata.";
-    }
-
     if(phoneNumber === "") {
         return "Te rugam sa introduci numarul de telefon.";
     }

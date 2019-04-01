@@ -215,14 +215,12 @@ $(document).ready(function() {
   }
 
   let enrollCoursePayload = function() {
-    let dataNasterii = $(".date-input").val().split("/");
-    dataNasterii = dataNasterii[2] + "-" + dataNasterii[0] + "-" + dataNasterii[1];
     return {
         // curs_id: window.localStorage.getItem("curs_id"),
         curs_id: '4',
         first_name: $(".first-name").val(),
         last_name: $(".last-name").val(),
-        data_nasterii: dataNasterii,
+        data_nasterii: $(".date-input").val(),
         cunostinte_it: $(".it-knowledge").val(),
         email: $(".email").val(),
         telefon: $(".phone").val(),

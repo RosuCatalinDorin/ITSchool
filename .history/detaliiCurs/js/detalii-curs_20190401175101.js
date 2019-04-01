@@ -216,7 +216,7 @@ $(document).ready(function() {
 
   let enrollCoursePayload = function() {
     let dataNasterii = $(".date-input").val().split("/");
-    dataNasterii = dataNasterii[2] + "-" + dataNasterii[0] + "-" + dataNasterii[1];
+    dataNasterii = dataNasterii[2] + "-" + dataNasterii[0] + "-" + dataNasterii[0];
     return {
         // curs_id: window.localStorage.getItem("curs_id"),
         curs_id: '4',

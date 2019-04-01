@@ -215,14 +215,12 @@ $(document).ready(function() {
   }
 
   let enrollCoursePayload = function() {
-    let dataNasterii = $(".date-input").val().split("/");
-    dataNasterii = dataNasterii[2] + "-" + dataNasterii[0] + "-" + dataNasterii[1];
     return {
         // curs_id: window.localStorage.getItem("curs_id"),
         curs_id: '4',
         first_name: $(".first-name").val(),
         last_name: $(".last-name").val(),
-        data_nasterii: dataNasterii,
+        data_nasterii: $(".date-input").val(),
         cunostinte_it: $(".it-knowledge").val(),
         email: $(".email").val(),
         telefon: $(".phone").val(),
@@ -237,33 +235,10 @@ $(document).ready(function() {
 
   // SEND EMAIL SECTION
 
-  $(".email-footer").change(function(){
-    let isEmail = ValidateInputs.validateEmail($(".email-footer").val());
-    let emailErrorMsg = $('.email-after-submit');
-    if(typeof isEmail === "string") {
-      emailErrorMsg.html(isEmail).fadeIn().addClass("red");
-      return false;
-    }
-
-    emailErrorMsg.fadeOut();
-  });
-
-  $(".message-footer").change(function(){
-    let isMessage = ValidateInputs.validateContactMessage($(".message-footer").val());
-    let messageToBeDisplayed = $(".message-after-submit");
-
-    if(typeof isMessage === "string") {
-      messageToBeDisplayed.html(isEmail).fadeIn().addClass("red");
-      return false;
-    }
-
-    messageToBeDisplayed.fadeOut();
-  });
-
   $(".submit-button-footer").on("click", function(ev) {
     ev.preventDefault();
-    let isMessageValid = ValidateInputs.validateContactMessage($(".message-footer").val());
-    let isEmailValid = ValidateInputs.validateEmail($(".email-footer").val());
+    let isMessageValid = ValidateInputs.validateContactMessage($(".mesaj-input").val());
+    let isEmailValid = ValidateInputs.validateEmail($(".email-input").val());
     let messageToBeDisplayed = $(".message-after-submit");
 
     if(validateContactForm(isEmailValid, isMessageValid, messageToBeDisplayed)) {
@@ -298,8 +273,8 @@ $(document).ready(function() {
 
   var sendEmailPayload = function () {
     return {
-        email: $(".email-footer").val(),
-        msg: $(".message-footer").val()
+        email: $(".email-input").val(),
+        msg: $(".mesaj-input").val()
     };
   }
 
