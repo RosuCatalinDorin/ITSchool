@@ -64,6 +64,8 @@
               'PRET' => $PRET,
               'MSG_ATENTIONARE_DATA_START' => $MSG_ATENTIONARE_DATA_START,
               'POZA_DESCRIERE' => $POZA_DESCRIERE,
+              'DESCRIERE'=>$DESCRIERE,
+              'MSG_PERS_TARGETATE'=>$MSG_PERS_TARGETATE,
               'TRAINERI'=>$traineri_course,
               "TEHNOLOGII"=>$teh_course
           );
