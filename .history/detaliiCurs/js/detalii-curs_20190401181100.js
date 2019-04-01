@@ -325,7 +325,7 @@ $(document).ready(function() {
     var html = "";
     $.each(traineri, function(index, trainer) {
         html += "<div class='trainer-linkedin'>";
-        html += "<p class='trainer-name'>" + trainer.NUME + " " +trainer.PRENUME + "</p>";
+        html += "<p class='trainer-name display-center'>" + trainer.NUME + " " +trainer.PRENUME + "</p>";
         html += "<i href='" + trainer.LINKEDIN + "' class='fab fa-linkedin'></i>";
         html += "</div>"
     });
@@ -340,8 +340,8 @@ $(document).ready(function() {
         html += "<div class='trainer-profile'>";
         html += "<div class='trainer-image-container'>";
         html += "<img src='"+ trainer.POZA +"' class='trainer-image' alt='Ionut Pausan Pic'>";
-        html += "</div>";
-        html += "<div class='trainer-name display-center'>";
+        html += "</div>"
+        html += "<div class='trainer-name'>";
         html += "<h3>" + trainer.NUME + " " +trainer.PRENUME + "</h3>";
         html += "</div>";
         html += "</div>";
@@ -352,15 +352,10 @@ $(document).ready(function() {
         html += "<div class='trainer-short-description'>";
         html += "<a href='" + trainer.LINKEDIN + "'><span>linkedin</span></a>";
         html += "<span>"+ trainer.PROFESIE +"</span>";
-        html += "</div>";
-        html += "</div>";
+        html += "</div>"
+        html += "</div>"
 
-        html += "</div>";
-        html += "<hr>";
-        html += "<hr>";
-
-        html += "<div style='width:100%;height:1px; border:var(--main-border-container);'>";
-        html += "</div>";
+        html += "</div>"
     });
     $('.trainer-container').html(html);
   }

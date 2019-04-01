@@ -278,12 +278,9 @@
     margin-bottom: 20px;
 }
 
-.display-center {
-    margin: 0 auto;
-}
-
 .trainer-name h3{
     text-align: center;
+    margin: 0 auto;
 }
 
 .trainer-description h4,p{

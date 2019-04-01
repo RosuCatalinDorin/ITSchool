@@ -356,9 +356,6 @@ $(document).ready(function() {
         html += "</div>";
 
         html += "</div>";
-        html += "<hr>";
-        html += "<hr>";
-
         html += "<div style='width:100%;height:1px; border:var(--main-border-container);'>";
         html += "</div>";
     });
