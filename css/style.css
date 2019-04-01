@@ -238,6 +238,7 @@ header {
 .card.pricing .card-body {
     padding:  0  1.75rem  1.75rem 1.75rem;
 }
-.test{
-
+.image-log-nav-bar{
+    width: 45px;
+    height: 45px;
 }

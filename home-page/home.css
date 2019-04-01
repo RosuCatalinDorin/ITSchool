@@ -216,6 +216,11 @@
         margin:0;
         border: none;
     }
+    .social-media-icons{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
     
 }
 
