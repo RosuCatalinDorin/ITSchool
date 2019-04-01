@@ -354,8 +354,13 @@ $(document).ready(function() {
         html += "<span>"+ trainer.PROFESIE +"</span>";
         html += "</div>";
         html += "</div>";
+        html += "<hr>";
+        html += "<hr>";
 
+        html += "<div style='width:100%;height:1px; border:var(--main-border-container);'>";
         html += "</div>";
+        html += "</div>";
+      
     });
     $('.trainer-container').html(html);
   }

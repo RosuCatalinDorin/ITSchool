@@ -609,4 +609,6 @@ form label{
 
 /* FOOTER END */
 
-    
+.trainer-row:last-child {
+    background : red!important;
+}

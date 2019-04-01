@@ -609,4 +609,7 @@ form label{
 
 /* FOOTER END */
 
-    
+.trainer-description:last-of-type {
+    background : red!important;
+    color: red!important;
+}

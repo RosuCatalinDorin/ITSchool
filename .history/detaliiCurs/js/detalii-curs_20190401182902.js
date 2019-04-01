@@ -356,6 +356,8 @@ $(document).ready(function() {
         html += "</div>";
 
         html += "</div>";
+        html += "<hr>";
+
     });
     $('.trainer-container').html(html);
   }
