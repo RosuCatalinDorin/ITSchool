@@ -143,7 +143,8 @@ $(document).ready(function() {
     var errList = [firstNameErr, lastNameErr, dateErr, knowledgeErr, emailErr, phoneErr, industryErr, messageErr];
 
     if(typeof isFirstName === "boolean" & typeof isLastName === "boolean" & typeof isDate === "boolean" & typeof itKnowledge === "boolean" &
-      typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean"){ 
+      typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
+      typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
 
         return true;
@@ -205,6 +206,12 @@ $(document).ready(function() {
 
     messageErr.fadeOut();
 
+    if(typeof isChecked === "string") {
+      messageErr.html(isChecked).fadeIn().addClass("red");
+      return false;
+    }
+
+    messageErr.fadeOut();
     return true;
   }
 
