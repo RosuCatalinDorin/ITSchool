@@ -146,7 +146,8 @@ $(document).ready(function() {
       typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
       typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
-        return true; 
+
+        return true;
     }
 
     if(typeof isFirstName === "string") {
@@ -317,7 +318,10 @@ $(document).ready(function() {
     $('.numar-total-ore-curs').html(course.NUMAR_TOTAL_ORE + " de ore");
     $('.pret-curs-detalii').html(course.PRET);
     $('.titlu-curs-red').html(course.TITLU_CURS);
+    $('.descriere-curs-text').html(course.DESCRIERE);
+    $('.descriere-curs-text').html(course.DESCRIERE);
     displayTrainerSocialMedia(course.TRAINERI);
+
     displayTraineri(course.TRAINERI);
   }
 
@@ -355,8 +359,6 @@ $(document).ready(function() {
         html += "</div>";
         html += "</div>";
 
-        html += "</div>";
-        html += "<div style='width:100%;height:1px; border:var(--main-border-container);'>";
         html += "</div>";
     });
     $('.trainer-container').html(html);
