@@ -25,13 +25,13 @@ $data = json_decode(file_get_contents("php://input"));
 
 if($data == null){
     $controler->curs_id = $_POST['curs_id'];
-    $controler->first_name = $_POST['nume'];
-    $controler->last_name = $_POST['prenume'];
+    $controler->first_name = $_POST['first_name'];
+    $controler->last_name = $_POST['last_name'];
     $controler->birthday = $_POST['data_nasterii'];
     $controler->cunostinte_it = $_POST['cunostinte_it'];
     $controler->email = $_POST['email'];
     $controler->telefon = $_POST['telefon'];
-    $controler->profesie_actuala = $_POST['profesie_actuala'];
+    $controler->profesie_actuala = $_POST['old_industry'];
     $controler->nivel_engleza = $_POST['nivel_engleza'];
     $controler->info_marketing_source = $_POST['info_marketing_source'];
     $controler->accept_termeni_conditii = $_POST['accept_termeni_conditii'];
@@ -39,13 +39,13 @@ if($data == null){
 }
 else {
     $controler->curs_id = $data->curs_id;
-    $controler->first_name = $data->nume;
-    $controler->last_name = $data->prenume;
+    $controler->first_name = $data->first_name;
+    $controler->last_name = $data->last_name;
     $controler->birthday = $data->data_nasterii;
     $controler->cunostinte_it = $data->cunostinte_it;
     $controler->email = $data->email;
     $controler->telefon = $data->telefon;
-    $controler->profesie_actuala = $data->profesie_actuala;
+    $controler->profesie_actuala = $data->old_industry;
     $controler->nivel_engleza = $data->nivel_engleza;
     $controler->info_marketing_source = $data->info_marketing_source;
     $controler->accept_termeni_conditii = $data->accept_termeni_conditii;

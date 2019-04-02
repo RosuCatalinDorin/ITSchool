@@ -32,14 +32,18 @@
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-dark navbar-expand-lg">
-                    <a class="navbar-brand" href="../../home-page/index.html"><img src="../../images/head.png" height="50" width="50" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                    <a class="navbar-brand" href="../../home-page/index.html"><img src="../../images/head.png" height="50" width="50" class="img-fluid image-log-nav-bar" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"> <a class="nav-link active" href="../../home-page/index.html">ACASĂ <span class="sr-only">(current)</span></a> </li>
+<<<<<<< HEAD
                             <!-- <li class="nav-item"> <a class="nav-link active" href="../../home-page/index.html">Informatii curs <span class="sr-only"></span></a> </li>
                             <li class="nav-item"> <a class="nav-link active" href="../../home-page/index.html">Traineri <span class="sr-only"></span></a> </li>
                             <li class="nav-item"> <a class="nav-link active" href="../../home-page/index.html">Inscrie-te <span class="sr-only"></span></a> </li>
                             <li class="nav-item"> <a class="nav-link active" href="../../home-page/index.html">Contact <span class="sr-only"></span></a> </li> -->
+=======
+
+>>>>>>> b9db259584cd3156234316fafb1c13033f196eec
                         </ul>
                     </div>
                 </nav>
@@ -141,7 +145,6 @@
         <div class="programa-curs-row">
             <header class="programa-curs-header">
                 <h4>Tehnologii folosite</h4>
-                <i class="fab fa-linkedin"></i>
             </header>
             <ul class="lista-programa-curs">
                 <li>HTML / CSS / Java-Script</li>
@@ -153,12 +156,11 @@
         <div class="programa-curs-row">
             <header class="programa-curs-header">
                 <h4>Cunostinte de baza</h4>
-                <i class="fab fa-linkedin"></i>
             </header>
             <ul class="lista-programa-curs">
                 <div class="web-basics">
                     <li >Web basics</li>
-                    <div>
+                    <div class="lista-program-web-basic">
                         <p>HTTP(S)</p>
                         <p>TCP/IP</p>
                         <p>URL/URI</p>
@@ -172,7 +174,6 @@
         <div class="programa-curs-row">
             <header class="programa-curs-header">
                 <h4>Mindset of a developer</h4>
-                <i class="fab fa-linkedin"></i>
             </header>
             <ul class="lista-programa-curs">
                 <li>HTML / CSS / Java-Script</li>
@@ -233,27 +234,27 @@
                         <div class="row input-space">
                             <div class="col-xs-6 col-md-6">
                                 <label for="firstname">Prenume</label>
-                                <input type="text" name="firstname" value="" class="form-control input-lg first-name" required placeholder="First Name"/>
+                                <input id="firstname" type="text" name="firstname" value="" class="form-control input-lg first-name" required placeholder="First Name"/>
                                 <p class="firstname-error-msg"></p>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                     <label for="lastname">Nume</label>
-                                <input type="text" name="lastname" value="" class="form-control input-lg last-name" required placeholder="Last Name"/>    
+                                <input  id="lastname" type="text" name="lastname" value="" class="form-control input-lg last-name" required placeholder="Last Name"/>
                                 <p class="lastname-error-msg"></p>
                             </div>
                         </div>
     
-                        <label for="date">Data nasterii*</label>
+                        <label for="dataNasteri">Data nasterii*</label>
                         <div class="input-group date input-space" class="datepicker date-input" data-provide="datepicker">
-                            <input type="text" class="input-space form-control input-lg date-input" placeholder="09.12.2019" required>
+                            <input  id="dataNasteri" type="text" class="input-space form-control input-lg date-input" placeholder="09.12.2019" required>
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar" style="color:black"></i>
                             </div>
                             <p class="date-error-msg"></p>
                         </div>
                         
-                        <label for="date">Cunostinte in IT</label>
-                        <textarea required type="text" name="date" value="" class="input-space form-control input-lg it-knowledge" placeholder="Descrie in 2-3 randuri cunostintele tale in IT"/></textarea>
+                        <label for="cunostinteIt">Cunostinte in IT</label>
+                        <textarea  id="cunostinteIt" required type="text" name="date" value="" class="input-space form-control input-lg it-knowledge" placeholder="Descrie in 2-3 randuri cunostintele tale in IT"/></textarea>
                         <p class="knowledge-error-msg"></p>
                         <div class="row input-space">
                             <div class="col-xs-6 col-md-6">
@@ -263,22 +264,22 @@
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <label for="phone">Telefon</label>
-                                <input required type="tel" maxlength="10"  pattern="[0-9]{10}" name="phone" value="" class="form-control input-lg phone" placeholder="07439228843"/>    
+                                <input id="phone" required type="tel" maxlength="10"  pattern="[0-9]{10}" name="phone" value="" class="form-control input-lg phone" placeholder="07439228843"/>
                                 <p class="phone-error-msg"></p>
                             </div>
                         </div>
-                        <label for="date">Industria din care provii</label>
-                        <input type="text" name="date" value="" class="input-space form-control input-lg industry" required placeholder="Inginerie/Psihologie"/>
+                        <label for="oldIndustri">Industria din care provii</label>
+                        <input  id="oldIndustri" type="text" name="date" value="" class="input-space form-control input-lg industry" required placeholder="Inginerie/Psihologie"/>
                         <p class="industry-error-msg"></p>
-                        <label for="month">Nivel limba engleza</label>
-                        <select name="month" class = "form-control input-lg input-space english-level" required>
+                        <label for="nivelEngleza">Nivel limba engleza</label>
+                        <select id="nivelEngleza" name="month" class = "form-control input-lg input-space english-level" required>
                                 <option value="incepator">Incepator</option>
                                 <option value="mediu">Mediu</option>
                                 <option value="avansat">Avansat</option>
                         </select>
 
                         <div class="termeni-conditii">
-                            <input type="checkbox" class="input-space form-control input-lg checkbox" required/>
+                            <input type="checkbox" class="input-space form-control input-lg checkbox chack-box-termeni"  required/>
                             <span>Accept termenii si conditiile</span>        
                         </div>
                          <p class="message-after-enroll"></p>
@@ -295,31 +296,37 @@
         <div class="footer-row">
             <div class="social-media">
                 <h1>Contact:</h1>
+<<<<<<< HEAD
                 <p class="social-media-paragraph">Speak programming: 
+=======
+                <p class="social-media-paragraph">Speak programming:
+>>>>>>> b9db259584cd3156234316fafb1c13033f196eec
                     <span>contact@speakprogramming.ro</span>
                 </p>
-                <p class="social-media-paragraph">Facebook: 
+                <p class="social-media-paragraph">Facebook:
                     <span>contact@speakprogramming.ro</span>
                 </p>
                 <div class="social-media-icons">
-
                 </div>
+                <a href="https://www.facebook.com/Speak-programming-1995720327193287/">     <i class="fab fa-facebook-square"></i> </a>
             </div>
 
-            <div class="contact-form">
+            <div id="contact" class="contact-form">
                 <h1>Email us:</h1>
                 <label for="email">Email:</label>
-                <input type="email" name="email" value="" class="form-control input-lg input-space email-footer" placeholder="Your Email"/>
+                <input id="email" type="text" name="email" value="" class="form-control input-lg input-space email-input"
+                       placeholder="Your Email"/>
                 <p class="email-after-submit"></p>
-
                 <label for="mesaj">Scrie-ne un mesaj:</label>
-                <textarea type="text" name="mesaj" value="" class="input-space form-control input-lg message-footer" placeholder="Mesaj..."/></textarea>
+                <textarea id="mesaj" type="text" name="mesaj" value="" class="input-space form-control input-lg mesaj-input"
+                          placeholder="Mesaj..."/></textarea>
                 <p class="message-after-submit"></p>
                 <button class="btn submit-button-footer">Submit</button>
             </div>
         </div>
-
-        <p class="copyright-message text-center"><small>COPYRIGHT © 2019. ALL RIGHTS RESERVED BY <a href="">SPEAK PROGRAMMING</a></small></p>
+        <p class="copyright-message text-center">
+            <small>COPYRIGHT © 2019. ALL RIGHTS RESERVED BY <a href="">SPEAK PROGRAMMING</a></small>
+        </p>
     </div>
 </footer>
     <script src="../../js/jquery-3.2.1.min.js"></script>

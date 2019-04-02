@@ -292,8 +292,12 @@
 
 .trainer-short-description span{
     padding-right: 5%;
-}
 
+}
+trainer-short-description a:hover{
+    cursor: pointer;
+    color: red;
+}
 .marketing-section-part1{
     height: 50%;
 }
@@ -509,7 +513,7 @@ form label{
 
   .info-title h2 {
         text-align: center;
-        font-size: 23px;
+        font-size: 40px;
     }
 
   .info-curs-detalii {
@@ -518,9 +522,10 @@ form label{
         margin-bottom: 30px;
     }
 
-  .info-curs-container {
-        width: var(--main-content-width-mobile);
-        margin: auto;
+    .info-curs-container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
   .informatii-curs-sumar {
         width: 100%;
@@ -540,15 +545,18 @@ form label{
     }
     .programa-curs-row {
         width: 100%;
-        border-radius: 3%;
+        padding-right: 15px;
+        padding-left: 15px;
         background: var(--card-bk-color);
         margin-bottom: 40px;
     }
+    .inscriere-form-container{
+        width:100%;
+    }
     .programa-curs {
-        margin: auto;
-        width: var(--main-content-width-mobile);
-        justify-content: space-between;
-        padding-bottom: 50px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .trainer-row {
         margin-top: 40px;
@@ -564,18 +572,22 @@ form label{
         font-size: 50px;
         height: auto;
     }
+    .descriere-trainer{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .trainer-description {
         width: 100%;
     }
     .trainer-image-container {
-        width: 34%;
+        width: 100%;
         justify-content: center;
+        display: flex;
         margin-bottom: 20px;
     }
     .trainer-image {
         border-radius: 50%;
-      /*  todo: vezi aici cu margi ca nu resuesc sa o centrez decat cu tigania asta adica margin -30px*/
-        margin-left: -30px;
         width: 136px;
         height: 136px;
     }
@@ -583,16 +595,40 @@ form label{
         width: 100%;
         margin-bottom: 20px;
     }
+    .inscriere-curs-section{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .inscriere-marketing-section{
+        display: none;
+    }
     .inscriere-curs-container {
         display: block;
-        width: var(--main-content-width-mobile);
-        margin: auto;
+        width: 100%;
+
     }
     .inscriere-marketing-section{
         width: 100%;
     }
-    .inscriere-form-container{
+    .formular-inscriere{
         width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .trainer-description h4, p {
+        padding-bottom: 0;
+    }
+    .chack-box-termeni{
+        width: 40px;
+    }
+    .lista-program-web-basic p{
+        font-size: 17px;
+    }
+    .social-media-icons{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
     }
 }
 
@@ -605,6 +641,7 @@ form label{
     color: #52c41a;
     padding-bottom: 0;
 }
+
 
 
 /* FOOTER END */
