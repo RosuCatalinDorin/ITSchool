@@ -95,16 +95,16 @@ $(document).ready(function() {
     industryErr.fadeOut();
   });
 
-  // $(".checkbox").change(function(){
-  //   let isChecked = ValidateInputs.validateCheckbox($(".checkbox")[0].checked)
+  $(".checkbox").change(function(){
+    let isChecked = ValidateInputs.validateCheckbox($(".checkbox")[0].checked)
 
-  //   if(typeof isChecked === "string") {
-  //     messageToBeDisplayed.html(isChecked).fadeIn().addClass("red");
-  //     return false;
-  //   }
+    if(typeof isChecked === "string") {
+      messageToBeDisplayed.html(isChecked).fadeIn().addClass("red");
+      return false;
+    }
 
-  //   messageToBeDisplayed.fadeOut();
-  // });
+    messageToBeDisplayed.fadeOut();
+  });
 
   $(".enroll-btn").on("click", function(event) {
     event.preventDefault();
@@ -138,12 +138,13 @@ $(document).ready(function() {
     let isPhone = ValidateInputs.validatePhoneNumber($(".phone").val());
     let isIndustry = ValidateInputs.validateIndustry($(".industry").val());
     let isEnglishLevel = ValidateInputs.onlyLettersAllowed($(".english-level").val());
-    // let isChecked = ValidateInputs.validateCheckbox($(".checkbox")[0].checked);
+    let isChecked = ValidateInputs.validateCheckbox($(".checkbox")[0].checked);
 
     var errList = [firstNameErr, lastNameErr, dateErr, knowledgeErr, emailErr, phoneErr, industryErr, messageErr];
 
     if(typeof isFirstName === "boolean" & typeof isLastName === "boolean" & typeof isDate === "boolean" & typeof itKnowledge === "boolean" &
-      typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean"){ 
+      typeof isEmail === "boolean" & typeof isPhone === "boolean" & typeof isIndustry === "boolean" & typeof isEnglishLevel === "boolean" &
+      typeof isChecked === "boolean"){ 
         resetErrorMessages(errList);
 
         return true;
@@ -205,6 +206,12 @@ $(document).ready(function() {
 
     messageErr.fadeOut();
 
+    if(typeof isChecked === "string") {
+      messageErr.html(isChecked).fadeIn().addClass("red");
+      return false;
+    }
+
+    messageErr.fadeOut();
     return true;
   }
 
@@ -222,7 +229,7 @@ $(document).ready(function() {
         telefon: $(".phone").val(),
         old_industry: $(".industry").val(),
         nivel_engleza: $(".english-level").val(),
-        // accept_termeni_conditii: $(".checkbox")[0].checked 
+        accept_termeni_conditii: $(".checkbox")[0].checked 
     };
   }
 
@@ -312,7 +319,7 @@ $(document).ready(function() {
     $('.pret-curs-detalii').html(course.PRET);
     $('.titlu-curs-red').html(course.TITLU_CURS);
     $('.descriere-curs-text').html(course.DESCRIERE);
-    $('.msg-pers-targetate').html(course.MSG_PERS_TARGETATE);
+    $('.descriere-curs-text').html(course.DESCRIERE);
     displayTrainerSocialMedia(course.TRAINERI);
 
     displayTraineri(course.TRAINERI);

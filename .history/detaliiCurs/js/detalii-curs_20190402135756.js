@@ -205,6 +205,12 @@ $(document).ready(function() {
 
     messageErr.fadeOut();
 
+    if(typeof isChecked === "string") {
+      messageErr.html(isChecked).fadeIn().addClass("red");
+      return false;
+    }
+
+    messageErr.fadeOut();
     return true;
   }
 

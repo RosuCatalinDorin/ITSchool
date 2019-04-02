@@ -36,6 +36,10 @@ var ValidateInputs = (function() {
       return "Va rog completati sectiunea 'Cunostinte in It'!";
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b9db259584cd3156234316fafb1c13033f196eec
     if(message[0] === "`" || message[0] === "<" || message[0] === "=") {
       return "Mesajul nu poate sa inceapa cu caractere special precum '`', '<' sau '='!"
     }
@@ -78,20 +82,27 @@ var ValidateInputs = (function() {
   };
 
   var validateIndustry = function(industry) {
+<<<<<<< HEAD
 
     if (industry === "") {
       return "Te rugam sa introduci industria din care provii.";
     }
 
 
+=======
+
+>>>>>>> b9db259584cd3156234316fafb1c13033f196eec
     if(!industry) {
       return "Te rugam sa introduci industria din care provii.";
     }
 
+<<<<<<< HEAD
     if (industry === "") {
       return "Te rugam sa introduci industria din care provii.";
     }
 
+=======
+>>>>>>> b9db259584cd3156234316fafb1c13033f196eec
     if(industry[0] === "`" || industry[0] === "<" || industry[0] === "=") {
       return "Acest camp nu poate sa contina caractere special precum '`', '<' sau '='!"
     }
@@ -104,9 +115,12 @@ var ValidateInputs = (function() {
       return "Data nasterii trebuie selectata.";
     }
 
+<<<<<<< HEAD
     if (date === "") {
       return "Data nasterii trebuie selectata.";
     }
+=======
+>>>>>>> b9db259584cd3156234316fafb1c13033f196eec
 
     return true;
   };
@@ -130,6 +144,18 @@ var ValidateInputs = (function() {
 
     return true;
   };
+  
+  var validateCheckbox = function (isChecked) {
+    if(!isChecked) {
+      return "Te rugam sa bifezi termenii si conditiile";
+    }
+
+    if(typeof bool !== "boolean") {
+      return;
+    }
+
+    return true;
+  }
 
   var onlyLettersAllowed = function(str) {
     var re = /^[a-zA-Z]+$/;
@@ -166,6 +192,10 @@ var ValidateInputs = (function() {
 
     validateFirstName: firstName => {
       return validateFirstName(firstName);
+    },
+
+    validateCheckbox: bool => {
+      return validateCheckbox(bool);
     },
 
     validateIndustry: industry => {

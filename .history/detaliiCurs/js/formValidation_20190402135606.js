@@ -130,6 +130,18 @@ var ValidateInputs = (function() {
 
     return true;
   };
+  
+  var validateCheckbox = function (isChecked) {
+    if(!isChecked) {
+      return "Te rugam sa bifezi termenii si conditiile";
+    }
+
+    if(typeof bool !== "boolean") {
+      return;
+    }
+
+    return true;
+  }
 
   var onlyLettersAllowed = function(str) {
     var re = /^[a-zA-Z]+$/;
@@ -166,6 +178,10 @@ var ValidateInputs = (function() {
 
     validateFirstName: firstName => {
       return validateFirstName(firstName);
+    },
+
+    validateCheckbox: bool => {
+      return validateCheckbox(bool);
     },
 
     validateIndustry: industry => {
