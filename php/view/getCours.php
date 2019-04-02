@@ -66,6 +66,9 @@
               'POZA_DESCRIERE' => $POZA_DESCRIERE,
               'DESCRIERE'=>$DESCRIERE,
               'MSG_PERS_TARGETATE'=>$MSG_PERS_TARGETATE,
+              'POZA_LOGO_TEH1'=>$POZA_LOGO_TEH1,
+              'POZA_LOGO_TEH2'=>$POZA_LOGO_TEH2,
+              'POZA_LOGO_TEH3'=>$POZA_LOGO_TEH3,
               'TRAINERI'=>$traineri_course,
               "TEHNOLOGII"=>$teh_course
           );

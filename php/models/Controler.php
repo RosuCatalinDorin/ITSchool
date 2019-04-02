@@ -30,8 +30,8 @@ class Controler {
     }
     public function getCursById() {
         // Create query
-        $query = 'SELECT C.titlu_curs as TITLU_CURS,C.sub_titlu AS SUB_TITLU, C.msg_pers_targetate AS MSG_PERS_TARGETATE, C.descriere AS DESCRIERE C.nivel AS NIVEL, GR.data_start AS DATA_START,C.durata_curs AS DURATA_CURS,C.numar_ore_saptamana AS NUMAR_ORE_SAPTAMANA,
-         C.numar_total_ore AS NUMAR_TOTAL_ORE, C.pret AS PRET,C.msg_atentionare_date_start AS MSG_ATENTIONARE_DATA_START,C.poza_descriere AS POZA_DESCRIERE 
+        $query = 'SELECT C.titlu_curs as TITLU_CURS,C.sub_titlu AS SUB_TITLU, C.msg_pers_targetate AS MSG_PERS_TARGETATE, C.descriere AS DESCRIERE, C.nivel AS NIVEL, GR.data_start AS DATA_START,C.durata_curs AS DURATA_CURS,C.numar_ore_saptamana AS NUMAR_ORE_SAPTAMANA,
+         C.numar_total_ore AS NUMAR_TOTAL_ORE, C.pret AS PRET,C.msg_atentionare_date_start AS MSG_ATENTIONARE_DATA_START,C.poza_descriere AS POZA_DESCRIERE ,C.poza_logo_teh1 AS POZA_LOGO_TEH1, C.poza_logo_teh2 AS POZA_LOGO_TEH2 ,C.poza_logo_teh3 AS POZA_LOGO_TEH3
          FROM curs C
            INNER JOIN grupa_studenti GR ON GR.curs_id = C.curs_id WHERE C.curs_id=:CURS_ID';
         // Prepare statement
