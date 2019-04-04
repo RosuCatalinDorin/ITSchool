@@ -47,23 +47,31 @@ else {
     $controler->telefon = $data->telefon;
     $controler->profesie_actuala = $data->old_industry;
     $controler->nivel_engleza = $data->nivel_engleza;
-/*    $controler->info_marketing_source = $data->info_marketing_source;
+  /*$controler->info_marketing_source = $data->info_marketing_source;
     $controler->accept_termeni_conditii = $data->accept_termeni_conditii;
     $controler->preclucrare_date_perosnale = $data->preclucrare_date_perosnale;*/
 }
 // Create post
-if($controler->addCustomerToCourse() === true) {
-    if ($controler->sendEmail($mesajInscriere,$controler->email,null,true,"Speak Programming"))
-    echo json_encode(
-        array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
-    );
-    else
+if($controler->chackUser()=== true){
+    if($controler->addCustomerToCourse() === true) {
+        if ($controler->sendEmail($mesajInscriere,$controler->email,null,true,"Speak Programming"))
+            echo json_encode(
+                array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
+            );
+        else
+            echo json_encode(
+                array('STATUS' => 'SUCCES',"EMAIL"=>"ERROR")
+            );
+    } else {
         echo json_encode(
-            array('STATUS' => 'SUCCES',"EMAIL"=>"ERROR")
+            array('STATUS' => $controler->addCustomerToCourse())
         );
-} else {
-    echo json_encode(
-        array('STATUS' => $controler->addCustomerToCourse())
-    );
+    }
 }
+else{
+    echo json_encode(array('STATUS' =>"EXIST"));
+}
+
+
+
 

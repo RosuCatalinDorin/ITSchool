@@ -83,6 +83,22 @@ class Controler {
         $stmt->execute();
         return $stmt;
     }
+    public function chackUser(){
+        $query = "SELECT email FROM users WHERE email =:EMAIL and curs_id=:CURS_ID;";
+        // Prepare statement
+        $connection = $this->conn;
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':CURS_ID', $this->curs_id);
+        $stmt->bindParam(':EMAIL', $this->email);
+        $stmt->execute();
+        $num = $stmt->rowCount();
+
+        if($num > 0)
+            return false;
+        else
+            return true;
+
+    }
     // CreateUsers
     public function addCustomerToCourse() {
         $query = "INSERT INTO ". $this->tableUsers." ( first_name, last_name, phone, curs_id, email, birthday) values
@@ -229,4 +245,5 @@ class Controler {
         else
             return false ;
     }
+
 }
