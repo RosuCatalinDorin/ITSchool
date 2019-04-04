@@ -33,9 +33,9 @@ if($data == null){
     $controler->telefon = $_POST['telefon'];
     $controler->profesie_actuala = $_POST['old_industry'];
     $controler->nivel_engleza = $_POST['nivel_engleza'];
-    $controler->info_marketing_source = $_POST['info_marketing_source'];
+/*    $controler->info_marketing_source = $_POST['info_marketing_source'];
     $controler->accept_termeni_conditii = $_POST['accept_termeni_conditii'];
-    $controler->preclucrare_date_perosnale = $_POST['preclucrare_date_perosnale'];
+    $controler->preclucrare_date_perosnale = $_POST['preclucrare_date_perosnale'];*/
 }
 else {
     $controler->curs_id = $data->curs_id;
@@ -47,9 +47,9 @@ else {
     $controler->telefon = $data->telefon;
     $controler->profesie_actuala = $data->old_industry;
     $controler->nivel_engleza = $data->nivel_engleza;
-    $controler->info_marketing_source = $data->info_marketing_source;
+/*    $controler->info_marketing_source = $data->info_marketing_source;
     $controler->accept_termeni_conditii = $data->accept_termeni_conditii;
-    $controler->preclucrare_date_perosnale = $data->preclucrare_date_perosnale;
+    $controler->preclucrare_date_perosnale = $data->preclucrare_date_perosnale;*/
 }
 // Create post
 if($controler->addCustomerToCourse() === true) {

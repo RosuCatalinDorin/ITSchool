@@ -53,9 +53,29 @@ class Controler {
         $stmt->execute();
         return $stmt;
     }
-    public function tehnologisByCourse() {
+    public function tehnologisUsedByCourse() {
         // Create query
-        $query = 'SELECT tehnologie from curs_tech where curs_id=:CURS_ID';
+        $query = "SELECT tehnologie from curs_tech where curs_id=:CURS_ID and type ='tehnologii_folosite'";
+        // Prepare statement
+        $connection = $this->conn;
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':CURS_ID', $this->curs_id);
+        $stmt->execute();
+        return $stmt;
+    }
+    public function tehnologisBaseKnowledgeCourse() {
+        // Create query
+        $query = "SELECT tehnologie from curs_tech where curs_id=:CURS_ID and type ='cunostinte_de_baza'";
+        // Prepare statement
+        $connection = $this->conn;
+        $stmt = $connection->prepare($query);
+        $stmt->bindParam(':CURS_ID', $this->curs_id);
+        $stmt->execute();
+        return $stmt;
+    }
+    public function tehnologisMindSetCourse() {
+        // Create query
+        $query = "SELECT tehnologie from curs_tech where curs_id=:CURS_ID and type ='mindset'";
         // Prepare statement
         $connection = $this->conn;
         $stmt = $connection->prepare($query);
@@ -70,11 +90,12 @@ class Controler {
         // Prepare statement
         $queryUserID = 'SELECT MAX(user_id) as ID_USER from users';
 
-        $queryInsertMarkDet="INSERT INTO ".$this->tableMK."(user_id,  cunostinte_it, profesie_actuala, nivel_engleza, info_marketing_source, accept_termeni_conditii,preclucrare_date_perosnale)
-                                                    values (:user_id,:cunostinte_it,:profesie_actuala,:nivel_engleza,:info_marketing_source,:accept_termeni_conditii,:preclucrare_date_perosnale)";
-        $connection =  $this->conn;
-        $connection->beginTransaction();
+        $queryInsertMarkDet="INSERT INTO ".$this->tableMK."(user_id,  cunostinte_it, profesie_actuala, nivel_engleza)
+                                                    values (:user_id,:cunostinte_it,:profesie_actuala,:nivel_engleza)";
+
         try {
+            $connection =  $this->conn;
+            $connection->beginTransaction();
             $stmt = $connection->prepare($query);
             // Clean data
             $this->first_name = htmlspecialchars(strip_tags($this->first_name));
@@ -125,10 +146,10 @@ class Controler {
 
             $stmt = $connection->prepare($queryInsertMarkDet);
             $this->cunostinte_it = htmlspecialchars(strip_tags($this->cunostinte_it));
-            $this->profesie_actuala = htmlspecialchars(strip_tags($this->profesie_actuala));
+/*            $this->profesie_actuala = htmlspecialchars(strip_tags($this->profesie_actuala));*/
             $this->nivel_engleza = htmlspecialchars(strip_tags($this->nivel_engleza));
-            $this->info_marketing_source = htmlspecialchars(strip_tags($this->info_marketing_source));
-            $this->preclucrare_date_perosnale = htmlspecialchars(strip_tags($this->preclucrare_date_perosnale));
+          /*  $this->info_marketing_source = htmlspecialchars(strip_tags($this->info_marketing_source));
+            $this->preclucrare_date_perosnale = htmlspecialchars(strip_tags($this->preclucrare_date_perosnale));*/
 
             if($this->cunostinte_it==""){
                 $this->cunostinte_it = null;
@@ -139,7 +160,7 @@ class Controler {
             if($this->nivel_engleza==""){
                 $this->nivel_engleza = null;
             }
-            if($this->info_marketing_source==""){
+/*            if($this->info_marketing_source==""){
                 $this->info_marketing_source = null;
             }
             if($this->accept_termeni_conditii==""){
@@ -147,7 +168,7 @@ class Controler {
             }
             if($this->preclucrare_date_perosnale==""){
                 $this->preclucrare_date_perosnale = null;
-            }
+            }*/
        /*     if (!is_bool($this->accept_termeni_conditii)){
                 return false;
             }
@@ -159,9 +180,9 @@ class Controler {
             $stmt->bindParam(':cunostinte_it', $this->cunostinte_it);
             $stmt->bindParam(':profesie_actuala', $this->profesie_actuala);
             $stmt->bindParam(':nivel_engleza', $this->nivel_engleza);
-            $stmt->bindParam(':info_marketing_source', $this->info_marketing_source);
+         /* $stmt->bindParam(':info_marketing_source', $this->info_marketing_source);
             $stmt->bindParam(':accept_termeni_conditii', $this->accept_termeni_conditii);
-            $stmt->bindParam(':preclucrare_date_perosnale', $this->preclucrare_date_perosnale);
+            $stmt->bindParam(':preclucrare_date_perosnale', $this->preclucrare_date_perosnale);*/
             $stmt->execute();
             $connection->commit();
             return true;
