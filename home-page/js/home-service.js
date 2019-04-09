@@ -12,6 +12,7 @@ var homeService = (function() {
       html += "</div>";
       html += "<div class='course-image-container'></div>"
       html += "<ul class='list-group list-group-flush'>";
+      html += "<small class='curs-title curs-location'>Cluj-Napoca</small>";
       html += "<div class='list-group-item'>Foloseste Html5, Css3, Java-script, JQuery, GIT si invata cum sa construiesti un website de la zero." ;
       html += "</div>";
       html += "</ul>";
