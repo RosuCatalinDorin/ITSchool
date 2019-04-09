@@ -476,6 +476,12 @@ form label {
 }
 
 @media (max-width: 992px) {
+    .detalii-curs-motto {
+        width:90%;
+        margin: 0 auto 30px auto;
+        text-align: center;
+    }
+
     .h1 {
         font-size: 40px;
     }
