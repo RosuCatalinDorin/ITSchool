@@ -12,12 +12,12 @@ class Mail {
    public function connectMail() {
        $mail = new PHPMailer();
        $mail->isSMTP();
-       $mail->Host = 'smtp.hostinger.com';
+       $mail->Host = '';
        $mail->Port = 587;
        $mail->SMTPAuth = true;
-       $mail->Username = 'contact@speakprogramming.ro';
-       $mail->Password = 'CgPd7pqmPXXx2';
-       $mail->setFrom("contact@speakprogramming.ro", "Speak Programming");
+       $mail->Username = '';
+       $mail->Password = '';
+       $mail->setFrom("", "Speak Programming");
        return $mail;
    }
 }
