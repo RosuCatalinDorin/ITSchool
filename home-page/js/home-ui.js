@@ -7,7 +7,7 @@ var DetaliiCursUi = (function() {
         html += "<div class='card pricing'>";
         html += "<div class='card-head'>";
         html += "<small class='curs-title'>" +"</small>"; 
-        html += "<small class='price'>" +"349 EUR "+ "<sub>/"  + "</sub></small>";
+        html += "<small class='price'>" +"315 EUR "+ "<sub>/"  + "</sub></small>";
         html += "</div>";
         html += "<div class='course-image-container'></div>"
         html += "<ul class='list-group list-group-flush'>";

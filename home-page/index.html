@@ -1,18 +1,14 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
     <title>Speak Programming</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Speak programming description page">
-    <meta name="keywords"
-          content="HTML5, CSS, CSS3, Java-script, GIT, WEB DEVELOPMENT, programare, IT, acreditare, cariera">
+    <meta name="keywords" content="HTML5, CSS, CSS3, Java-script, GIT, WEB DEVELOPMENT, programare, IT, acreditare, cariera">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -21,18 +17,13 @@
     <link rel="stylesheet" href="../css/constants.css">
     <link rel="stylesheet" href="../detaliiCurs/css/detalii-curs.css">
     <link rel="stylesheet" href="./home.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
-
     <!-- Main css -->
     <link href="../css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/partea_de_susLogo.png"/>
 </head>
-
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
-
 <!-- NAV BAR START-->
 <div class="nav-menu fixed-top">
     <div class="nav-bar-container">
@@ -48,7 +39,7 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a class="nav-link active" href="#home">ACASĂ <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#cursuri">CURSURI</a></li>
+                           <!-- <li class="nav-item"><a class="nav-link" href="#cursuri">CURSURI</a></li>-->
                             <li class="nav-item"><a class="nav-link" href="#despre-noi">DESPRE NOI</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
                         </ul>
@@ -59,11 +50,8 @@
     </div>
 </div>
 <!-- NAV BAR END -->
-
 <!-- DETALII CURS -->
-
 <div class="detalii-curs-container"></div>
-
 <!-- DETALII CURS END -->
 
 <!-- START HEADER -->
@@ -73,7 +61,7 @@
     </div> -->
     <div class="container take-action-message">
         <h1 class="textClass text-center home-main-header"></h1>
-        <p class="home-main-sub-header">Vino la cursurile noastre sa invatam impreuna.</p>
+        <p class="home-main-sub-header"></p>
     </div>
     <div class="detalii-curs-button-container">
         <button type="button" class="btn enroll-header-btn">
@@ -81,21 +69,15 @@
         </button>
     </div>
 </header>
-
-
 <!-- END HEADER -->
-
-
-<div class="section section-home-curs" id="cursuri">
+<div class="section section-home-curs" style="display: none" id="cursuri">
     <div class="container course">
-        <h1 class="text-center home-main-header courseHeader">Vino sa înveți:</h1>
+        <h1 class="text-center home-main-header courseHeader"></h1>
         <div class=" course course1"></div>
     </div>
 </div>
 <!-- SECTIUNE CURSURI END -->
-
 <!-- SECTIUNE DESPRE NOI START -->
-
 <div class="section-about-us" id="despre-noi">
     <div class="section-despre-noi">
         <div class="section-despre-noi-content">
@@ -124,16 +106,11 @@
         </div>
     </div>
 </div>
-
-
 <!-- DESPRE NOI END -->
-
-
 <!-- SECTIUNE TRAINER START-->
-
 <div class="section section-home-trainer">
     <div class="container">
-        <h1 class="text-center home-main-header">Cu cine vei colabora?</h1>
+        <h1 class="text-center home-main-header colaboratori"></h1>
         <div class="card-deck">
             <div class="card pricing">
                 <div class="card-head">
@@ -153,7 +130,7 @@
             </div>
             <div class="card pricing">
                 <div class="card-head">
-                    <img src="../images/pozaIonutPausan.jpg" class="rounded-circle" alt="Cinque Terre" width="136"
+                    <img src="../images/cataRosuResize.jpg" class="rounded-circle" alt="Cinque Terre" width="136"
                          height="136">
                 </div>
                 <blockquote class="blockquote trainerCata"></blockquote>
@@ -169,11 +146,8 @@
         </div>
     </div>
 </div>
-
-
 <!-- SECTIUNE TRAINER END -->
-
-<!-- START FOOTER -->
+<!-- START FOOTER-->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-row">
@@ -182,12 +156,12 @@
                 <p class="social-media-paragraph">Speak programming:
                     <span>contact@speakprogramming.ro</span>
                 </p>
-                <p class="social-media-paragraph">Facebook:
-                    <span>contact@speakprogramming.ro</span>
-                </p>
+                <!--<p class="social-media-paragraph">Facebook:-->
+                <!--<span>contact@speakprogramming.ro</span>-->
+                <!--</p>-->
                 <div class="social-media-icons">
 
-                    <a href="https://www.facebook.com/Speak-programming-1995720327193287/"> <i
+                    <a target="_blank" href="https://www.facebook.com/Speak-programming-1995720327193287/"> <i
                             class="fab fa-facebook-square"></i> </a>
                 </div>
             </div>
@@ -202,8 +176,7 @@
 
                 <label for="mesaj">Scrie-ne un mesaj:</label>
                 <textarea id="mesaj" type="text" name="mesaj" value=""
-                          class="input-space form-control input-lg mesaj-input"
-                          placeholder="Mesaj..."/></textarea>
+                          class="input-space form-control input-lg mesaj-input" placeholder="Mesaj..."/></textarea>
                 <p class="message-after-submit"></p>
                 <button class="btn submit-button-footer">Submit</button>
             </div>
@@ -213,12 +186,9 @@
         </p>
     </div>
 </footer>
-
-
 <!-- SCRIPT SECTION -->
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
-
 <script src="../js/app.config.js"></script>
 <script src="../js/makeRekuest.js"></script>
 <script src="../js/createBodyRequest.js"></script>

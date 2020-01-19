@@ -3,7 +3,7 @@
     background-image: url("../../img/webdev.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom:25px;
+    padding-bottom: 25px;
     margin-top: 40px;
     height: 400px;
     display: flex;
@@ -12,17 +12,19 @@
     border-bottom: var(--main-border-container);
 }
 
-.detalii-curs-titlu{
+.detalii-curs-titlu {
     font-size: 80px;
     margin-bottom: 30px;
 }
 
-.detalii-curs-motto{
-    font-size: 35px;
+.detalii-curs-motto {
+	width: 50%;
+    margin: 0 auto 25px auto;
+    font-size: 22px;
     margin-bottom: 30px;
 }
 
-.enroll-header-btn{
+.enroll-header-btn {
     background: var(--main-red-color);
     font-size: var(--btn-font-size);
 }
@@ -38,41 +40,43 @@
     text-align: center;
 }
 
-.detalii-curs-button-container{
+.detalii-curs-button-container {
     margin-bottom: 30px;
 }
+
 /* Header ends */
 
 /* Info curs container start */
 .curs-container {
     width: var(--full-dimension);
-    padding-bottom:40px;
+    padding-bottom: 40px;
     border-bottom: var(--main-border-container);
 }
+
 .info-curs-container {
     width: var(--main-content-width);
     margin: auto;
 }
 
-.info-title{
+.info-title {
     padding-top: 55px;
     padding-bottom: 50px;
     height: auto;
 }
 
-.info-title h2{
+.info-title h2 {
     text-align: center;
     font-size: 50px;
 }
 
-    /* DETALII CURS -START */
-.info-curs-detalii{
+/* DETALII CURS -START */
+.info-curs-detalii {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.informatii-curs-sumar{
+.informatii-curs-sumar {
     width: 32%;
     /* -webkit-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
     -moz-box-shadow: 2px 3px 18px -2px rgba(186,186,186,0.68);
@@ -84,14 +88,14 @@
 
 .informatii-curs-sumar h3 {
     text-align: center;
-    padding:20px 0;
+    padding: 20px 0;
 }
 
-.informatii-curs-row{
+.informatii-curs-row {
     display: flex;
 }
 
-.row-first-elem{
+.row-first-elem {
     font-weight: bold;
     width: 31%;
     padding-left: 10%;
@@ -102,16 +106,15 @@
 }
 
 .row-second-elem {
-    width:60%;
+    width: 60%;
     text-align: start;
     padding-left: 20%;
-  }
+}
 
-.trainer-linkedin{
+.trainer-linkedin {
     display: flex;
     justify-content: space-between;
 }
-
 
 .trainer-linkedin i {
     padding-top: 8px;
@@ -121,29 +124,29 @@
     color: blue;
     cursor: pointer;
 }
+
 /* DETALII CURS -END */
 
 /* DESCRIERE CURS START */
-.descriere-curs{
+.descriere-curs {
     width: 62%;
 }
 
-.descriere-curs h4{
+.descriere-curs h4 {
     font-weight: bold;
 }
 
-.descriere-cui-se-adreseaza{
+.descriere-cui-se-adreseaza {
     padding-bottom: 20px;
 }
 
-.descriere-cui-se-adreseaza h4{
+.descriere-cui-se-adreseaza h4 {
     padding-bottom: 10px;
 }
 
 /* DESCRIERE CURS ENDS */
 
 /* Info curs container ends */
-
 
 /* PROGRAMA CURS START */
 .programa-curs-container {
@@ -153,12 +156,12 @@
     border-bottom: var(--main-border-container);
 }
 
-.programa-curs{
+.programa-curs {
     margin: auto;
     width: var(--main-content-width);
     justify-content: space-between;
     padding-bottom: 50px;
-      
+
 }
 
 .detalii-programa {
@@ -167,7 +170,7 @@
     justify-content: space-between;
 }
 
-.programa-curs-row{
+.programa-curs-row {
     width: 30%;
     border-radius: 3%;
     background: var(--card-bk-color);
@@ -176,22 +179,21 @@
 .programa-curs-header {
     padding-top: 20px;
     display: flex;
-    width:80%;
+    width: 80%;
     margin: auto;
     justify-content: center;
 }
 
-.programa-curs-header h4{
+.programa-curs-header h4 {
     padding: 20px 0;
     font-weight: bold;
 }
 
 .programa-curs-header i {
-    padding:25px 0 0 15px;
+    padding: 25px 0 0 15px;
 }
 
-
-.lista-programa-curs{
+.lista-programa-curs {
     width: 90%;
     margin: auto;
     padding-bottom: 10px;
@@ -202,7 +204,7 @@
     padding-bottom: 10px;
 }
 
-.web-basics{
+.web-basics {
     display: flex;
 }
 
@@ -210,15 +212,14 @@
     width: 50%;
 }
 
-.web-basics div{
+.web-basics div {
     padding-top: 10px;
 }
-
 
 /* PROGRAMA CURS ENDS */
 
 /* DESCRIERE TRAINER START */
-.trainer-section{
+.trainer-section {
     position: relative;
     width: var(--full-dimension);
     border-bottom: var(--main-border-container);
@@ -226,13 +227,12 @@
 }
 
 .descriere-trainer {
-    width:var(--main-content-width);
+    width: var(--main-content-width);
     margin: auto;
     color: white;
 }
 
-
-.info-title span{
+.info-title span {
     color: var(--main-red-color)
 }
 
@@ -242,39 +242,39 @@
     justify-content: space-between;
 }
 
-.trainer-profile{
-    width:30%;
+.trainer-profile {
+    width: 30%;
 }
 
 .trainer-delimitator {
     height: 1px;
     width: var(--full-dimension);
     position: absolute;
-    top:57%;
+    top: 57%;
     left: 0;
-    z-index:33;
-    margin:auto;
+    z-index: 33;
+    margin: auto;
 }
 
-.trainer-description{
+.trainer-description {
     width: 60%;
 }
 
-.trainer-image-container{
+.trainer-image-container {
     width: 34%;
     margin: auto;
     margin-bottom: 20px;
 }
 
 .trainer-image {
-    border-radius:50%;
-    margin:auto;
+    border-radius: 50%;
+    margin: auto;
     width: 136px;
     height: 136px;
 }
 
-.trainer-name{
-    width:66%;
+.trainer-name {
+    width: 66%;
     margin-bottom: 20px;
 }
 
@@ -282,27 +282,29 @@
     margin: 0 auto;
 }
 
-.trainer-name h3{
+.trainer-name h3 {
     text-align: center;
 }
 
-.trainer-description h4,p{
+.trainer-description h4, p {
     padding-bottom: 10px;
 }
 
-.trainer-short-description span{
+.trainer-short-description span {
     padding-right: 5%;
 
 }
-trainer-short-description a:hover{
+
+trainer-short-description a:hover {
     cursor: pointer;
     color: red;
 }
-.marketing-section-part1{
+
+.marketing-section-part1 {
     height: 50%;
 }
 
-.marketing-section-part1 h1{
+.marketing-section-part1 h1 {
     font-size: 50px;
     text-align: center;
     padding: 15% 0 20px 0;
@@ -310,12 +312,12 @@ trainer-short-description a:hover{
     color: var(--black);
 }
 
-.marketing-section-part1 h3{
+.marketing-section-part1 h3 {
     text-align: center;
     padding: 40px 0 20px 0;
 }
 
-.img-container{
+.img-container {
     display: flex;
     justify-content: space-around;
     padding-top: 15%;
@@ -337,59 +339,60 @@ trainer-short-description a:hover{
 .inscriere-curs-section {
     padding-bottom: 50px;
 }
+
 .curs-container {
-  
+
 }
 
-.inscriere-curs-container{
+.inscriere-curs-container {
     display: flex;
     width: var(--main-content-width);
     margin: auto;
 }
 
-.inscriere-marketing-section{
+.inscriere-marketing-section {
     background-image: url("../../img/curs.png");
-    background-size: cover; 
+    background-size: cover;
     border-radius: 2%;
-    width:49%;
+    width: 49%;
     background-color: lightgrey;
-    height:auto;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.inscriere-form-container{
-    width:49%;
+.inscriere-form-container {
+    width: 49%;
 }
 
-.formular-inscriere{
+.formular-inscriere {
     width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-.input-space{
+.input-space {
     margin-bottom: 20px;
 }
 
-.termeni-conditii{
+.termeni-conditii {
     display: flex;
     margin-bottom: 20px;
 }
 
-.checkbox{
+.checkbox {
     width: 2%;
     margin-top: 5px;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
-form label{
-    font-weight:bold;
+form label {
+    font-weight: bold;
     font-size: var(--main-small-font-size);
 }
 
 .enroll-btn {
     font-size: var(--btn-font-size);
-    background: var(--main-red-color)!important;
+    background: var(--main-red-color) !important;
 }
 
 .enroll-btn:hover {
@@ -397,6 +400,7 @@ form label{
     cursor: pointer;
     background-color: var(--main-red-color);
 }
+
 /* INSCRIERE CURS END */
 
 /* FOOTER START */
@@ -427,25 +431,25 @@ form label{
     padding: 0 15px;
 }
 
-.contact-form textarea{
+.contact-form textarea {
     margin-bottom: 35px;
 }
-
 
 .copyright-message {
     width: var(--full-dimension);
     margin: auto;
 }
-.copyright-message a{
+
+.copyright-message a {
     color: var(--main-red-color);
 }
 
-.social-media-paragraph{
+.social-media-paragraph {
     text-align: left;
     color: white;
 }
 
-.social-media-paragraph span{
+.social-media-paragraph span {
     color: #959094;
 }
 
@@ -471,52 +475,53 @@ form label{
     margin: auto;
 }
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
     .h1 {
         font-size: 40px;
     }
 
-   .footer-row {
-       flex-direction: column;
-   }
+    .footer-row {
+        flex-direction: column;
+    }
 
-   .footer-container {
-       width: 100%;
-       margin: 0;
-   }
+    .footer-container {
+        width: 100%;
+        margin: 0;
+    }
 
-   .social-media {
-       width: 100%;
-       margin: 0 auto;
-   }
+    .social-media {
+        width: 100%;
+        margin: 0 auto;
+    }
 
-   .social-media h1 {
-       text-align: center;
-   }
+    .social-media h1 {
+        text-align: center;
+    }
 
-   .copyright-message {
-       font-size: 55%;
-   }
+    .copyright-message {
+        font-size: 55%;
+    }
 
-   .contact-form {
-       width: 100%;
-   }
+    .contact-form {
+        width: 100%;
+    }
 
-   .contact-form h1 {
-       text-align: center;
-   }
-  /* css start */
-  .detalii-curs-titlu {
+    .contact-form h1 {
+        text-align: center;
+    }
+
+    /* css start */
+    .detalii-curs-titlu {
         font-size: 45px;
         margin-bottom: 30px;
     }
 
-  .info-title h2 {
+    .info-title h2 {
         text-align: center;
         font-size: 40px;
     }
 
-  .info-curs-detalii {
+    .info-curs-detalii {
         display: block;
         justify-content: space-between;
         margin-bottom: 30px;
@@ -527,22 +532,27 @@ form label{
         padding-left: 15px;
         padding-right: 15px;
     }
-  .informatii-curs-sumar {
+
+    .informatii-curs-sumar {
         width: 100%;
         border-radius: 3%;
         background: var(--card-bk-color);
     }
+
     .descriere-curs {
         width: 100%;
     }
-    .descriere-cui-se-adreseaza{
+
+    .descriere-cui-se-adreseaza {
         margin-top: 30px;
     }
+
     .detalii-programa {
         width: var(--full-dimension);
         display: block;
         justify-content: space-between;
     }
+
     .programa-curs-row {
         width: 100%;
         padding-right: 15px;
@@ -550,82 +560,101 @@ form label{
         background: var(--card-bk-color);
         margin-bottom: 40px;
     }
-    .inscriere-form-container{
-        width:100%;
+
+    .inscriere-form-container {
+        width: 100%;
     }
+
     .programa-curs {
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
     }
+
     .trainer-row {
         margin-top: 40px;
         display: block;
         justify-content: center;
     }
+
     .trainer-profile {
         width: 100%;
     }
+
     .info-title {
         padding-top: 55px;
         padding-bottom: 0;
         font-size: 50px;
         height: auto;
     }
-    .descriere-trainer{
+
+    .descriere-trainer {
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
     }
+
     .trainer-description {
         width: 100%;
     }
+
     .trainer-image-container {
         width: 100%;
         justify-content: center;
         display: flex;
         margin-bottom: 20px;
     }
+
     .trainer-image {
         border-radius: 50%;
         width: 136px;
         height: 136px;
     }
+
     .trainer-name {
         width: 100%;
         margin-bottom: 20px;
     }
-    .inscriere-curs-section{
+
+    .inscriere-curs-section {
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
     }
-    .inscriere-marketing-section{
+
+    .inscriere-marketing-section {
         display: none;
     }
+
     .inscriere-curs-container {
         display: block;
         width: 100%;
 
     }
-    .inscriere-marketing-section{
+
+    .inscriere-marketing-section {
         width: 100%;
     }
-    .formular-inscriere{
+
+    .formular-inscriere {
         width: 100%;
         margin: 0;
         padding: 0;
     }
+
     .trainer-description h4, p {
         padding-bottom: 0;
     }
-    .chack-box-termeni{
+
+    .chack-box-termeni {
         width: 40px;
     }
-    .lista-program-web-basic p{
+
+    .lista-program-web-basic p {
         font-size: 17px;
     }
-    .social-media-icons{
+
+    .social-media-icons {
         display: flex;
         justify-content: center;
         padding-bottom: 20px;
@@ -638,11 +667,25 @@ form label{
 }
 
 .green {
-    color: #52c41a;
+    color: #f2da24;
     padding-bottom: 0;
 }
 
+.fa-facebook-square {
+    font-size: 28px;
+}
 
+.fa-facebook-square:hover {
+    color: #4267b2;
+    cursor: pointer;
+    font-size: 29px;
+}
+.fab:hover{
+    color: var(--main-red-color)!important;
+}
+.fa-calendar-alt:hover{
+    color: var(--main-red-color)!important;
+}
 
 /* FOOTER END */
 

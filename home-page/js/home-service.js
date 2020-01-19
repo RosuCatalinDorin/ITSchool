@@ -12,7 +12,7 @@ var homeService = (function() {
       html += "</div>";
       html += "<div class='course-image-container'></div>"
       html += "<ul class='list-group list-group-flush'>";
-      html += "<div class='list-group-item'>Foloseste Html5, Css3, Java-script, JQuery, GIT si invata cum sa construiesti un website de la zero." ;
+      html += "<div class='list-group-item'>"+course.scurta_descriere;
       html += "</div>";
       html += "</ul>";
       html += "<div class='card-body'>";

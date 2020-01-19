@@ -10,7 +10,7 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
-
+// test db DO1f34gzjCxz5J6mQ
 include_once '../config/Database.php';
 include_once '../models/Controler.php';
 include_once '../config/emailMsg.php';
@@ -33,9 +33,9 @@ if($data == null){
     $controler->telefon = $_POST['telefon'];
     $controler->profesie_actuala = $_POST['old_industry'];
     $controler->nivel_engleza = $_POST['nivel_engleza'];
-    $controler->info_marketing_source = $_POST['info_marketing_source'];
+/*    $controler->info_marketing_source = $_POST['info_marketing_source'];
     $controler->accept_termeni_conditii = $_POST['accept_termeni_conditii'];
-    $controler->preclucrare_date_perosnale = $_POST['preclucrare_date_perosnale'];
+    $controler->preclucrare_date_perosnale = $_POST['preclucrare_date_perosnale'];*/
 }
 else {
     $controler->curs_id = $data->curs_id;
@@ -47,23 +47,31 @@ else {
     $controler->telefon = $data->telefon;
     $controler->profesie_actuala = $data->old_industry;
     $controler->nivel_engleza = $data->nivel_engleza;
-    $controler->info_marketing_source = $data->info_marketing_source;
+  /*$controler->info_marketing_source = $data->info_marketing_source;
     $controler->accept_termeni_conditii = $data->accept_termeni_conditii;
-    $controler->preclucrare_date_perosnale = $data->preclucrare_date_perosnale;
+    $controler->preclucrare_date_perosnale = $data->preclucrare_date_perosnale;*/
 }
 // Create post
-if($controler->addCustomerToCourse() === true) {
-    if ($controler->sendEmail($mesajInscriere,$controler->email,null,true,"Speak Programming"))
-    echo json_encode(
-        array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
-    );
-    else
+if($controler->chackUser()=== true){
+    if($controler->addCustomerToCourse() === true) {
+        if ($controler->sendEmail($mesajInscriere,$controler->email,null,true,"Speak Programming"))
+            echo json_encode(
+                array('STATUS' => 'SUCCES',"EMAIL"=>"SUCCES")
+            );
+        else
+            echo json_encode(
+                array('STATUS' => 'SUCCES',"EMAIL"=>"ERROR")
+            );
+    } else {
         echo json_encode(
-            array('STATUS' => 'SUCCES',"EMAIL"=>"ERROR")
+            array('STATUS' => $controler->addCustomerToCourse())
         );
-} else {
-    echo json_encode(
-        array('STATUS' => $controler->addCustomerToCourse())
-    );
+    }
 }
+else{
+    echo json_encode(array('STATUS' =>"EXIST"));
+}
+
+
+
 
