@@ -2,7 +2,7 @@
 $(document).ready(function() {
     var CONFIG = (function() {
     let homeHeader =  "Învățăm împreună unii de la ceilalți.";
-    let homeSubHeader = "Pregătește-te pentru ziua care va veni cu noi provocări. Înscrie-te la Speak Programming și învață să vorbești despre prorpiul tău cod.";
+    let homeSubHeader = "Pregătește-te pentru ziua care va veni cu noi provocări. Înscrie-te la Speak Programming și învață să vorbești despre propriul tău cod.";
     let courseHeader = "Vino să învățăm împreună!";
     let whyUsHeader = "De ce noi?";
 

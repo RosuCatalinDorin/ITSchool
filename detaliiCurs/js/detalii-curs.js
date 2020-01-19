@@ -106,7 +106,12 @@ $(document).ready(function() {
                     }, 3000);
                     return;
                 }
-                console.log(response);
+                 if(response.STATUS ==="EXIST"){
+                    messageToBeDisplayed.html("Exista deja un cursant cu aceasta adresa de e-mail. Va rugam introduceti o adresa noua!").fadeIn("slow").addClass("green");
+                    setTimeout(function () {
+                        messageToBeDisplayed.fadeOut();
+                    }, 3000);
+                }
             });
         }
     });
@@ -204,7 +209,7 @@ $(document).ready(function() {
         dataNasterii = dataNasterii[2] + "-" + dataNasterii[0] + "-" + dataNasterii[1];
         return {
             // curs_id: window.localStorage.getItem("curs_id"),
-            curs_id: '4',
+            curs_id: window.localStorage.getItem("curs_id"),
             first_name: $(".first-name").val(),
             last_name: $(".last-name").val(),
             data_nasterii: dataNasterii,
@@ -255,6 +260,7 @@ $(document).ready(function() {
 
         if (validateContactForm(isEmailValid, isMessageValid, messageToBeDisplayed)) {
             detaliiCourseService.sendEmail(sendEmailPayload()).then(function (response) {
+
                 if (response.EMAIL === "SUCCES") {
                     messageToBeDisplayed.html("Multumim pentru mesaj! Va vom contacta in curand!").fadeIn("slow").addClass("green");
                     setTimeout(function () {
@@ -330,7 +336,7 @@ $(document).ready(function() {
         $('.durata-curs').html(course.DURATA_CURS);
         $('.numar-ore-sapt-curs').html(course.NUMAR_ORE_SAPTAMANA + " ore/saptamana");
         $('.numar-total-ore-curs').html(course.NUMAR_TOTAL_ORE + " de ore");
-        $('.pret-curs-detalii').html(course.PRET);
+        $('.pret-curs-detalii').html(course.PRET + " EUR");
         $('.titlu-curs-red').html(course.TITLU_CURS);
         $('.descriere-curs-text').html(course.DESCRIERE);
         $('.msg-pers-targetate').html(course.MSG_PERS_TARGETATE);

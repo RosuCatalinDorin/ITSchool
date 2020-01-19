@@ -16,10 +16,9 @@
   $database = new Database();
   $db = $database->connect();
   $post = new Controler($db);
-  $post->curs_id = isset($_GET['CURS_ID']) ? $_GET['CURS_ID'] : die(); ;
+  $post->curs_id = isset($_GET['CURS_ID']) ? $_GET['CURS_ID'] : $_GET['CURS_ID'] = 4;
   $result = $post->getCursById();
   $num = $result->rowCount();
-
   if($num > 0) {
       // Post array
       $posts_arr = array();

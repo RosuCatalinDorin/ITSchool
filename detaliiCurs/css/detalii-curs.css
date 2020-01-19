@@ -18,7 +18,7 @@
 }
 
 .detalii-curs-motto {
-	width: 60%;
+	width: 50%;
     margin: 0 auto 25px auto;
     font-size: 22px;
     margin-bottom: 30px;
@@ -679,6 +679,12 @@ form label {
     color: #4267b2;
     cursor: pointer;
     font-size: 29px;
+}
+.fab:hover{
+    color: var(--main-red-color)!important;
+}
+.fa-calendar-alt:hover{
+    color: var(--main-red-color)!important;
 }
 
 /* FOOTER END */
